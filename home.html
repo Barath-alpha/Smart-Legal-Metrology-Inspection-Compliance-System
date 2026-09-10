@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Legal Metrology Inspection &amp; Compliance System | Official Digital Platform</title>
+  
+  <!-- SEO & Governance Metadata -->
+  <meta name="description" content="Official digital platform for authorized Legal Metrology inspectors to conduct packaged commodity label verification, automated compliance checks, evidence tracking, and statutory reporting under the Legal Metrology Act, 2009.">
+  <meta name="keywords" content="Legal Metrology, LMPC Rules 2011, Packaged Commodities, Digital Inspection, Compliance System, Government Portal">
+  <meta name="author" content="Directorate of Legal Metrology">
+  <meta name="theme-color" content="#091e3a">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/govt-seal.svg">
+
+  <!-- Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ========================================================================= -->
+  <!-- 1. OFFICIAL TOP INFORMATION BAR                                            -->
+  <!-- ========================================================================= -->
+  <a href="#main-content" class="skip-to-content">Skip to Main Content</a>
+  
+  <div class="gov-top-bar">
+    <div class="container-fluid px-lg-4">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center flex-wrap gap-2">
+          <span class="top-bar-item fw-semibold text-warning">
+            <i class="fas fa-shield-alt"></i> Official Digital Platform
+          </span>
+          <span class="top-bar-divider d-none d-md-inline-block"></span>
+          <span class="top-bar-item d-none d-md-inline-flex text-light">
+            <i class="fas fa-user-lock"></i> Authorized Personnel Access Only
+          </span>
+          <span class="top-bar-divider d-none d-lg-inline-block"></span>
+          <span class="top-bar-item d-none d-lg-inline-flex text-light">
+            <i class="fas fa-phone-alt"></i> Helpdesk: 1800-11-4000 (Toll-Free, 09:30–18:00 IST)
+          </span>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <!-- Accessibility Font Resizer -->
+          <div class="top-bar-item accessibility-btn-group d-flex align-items-center gap-1" aria-label="Text Size Controls">
+            <span class="text-light me-1 d-none d-sm-inline">Text:</span>
+            <button type="button" class="btn-access" id="btn-font-decrease" title="Decrease Font Size" aria-label="Decrease text size">A-</button>
+            <button type="button" class="btn-access" id="btn-font-normal" title="Normal Font Size" aria-label="Reset text size">A</button>
+            <button type="button" class="btn-access" id="btn-font-increase" title="Increase Font Size" aria-label="Increase text size">A+</button>
+          </div>
+
+          <!-- High Contrast Mode -->
+          <button type="button" class="high-contrast-toggle d-flex align-items-center gap-1" id="btn-high-contrast" title="Toggle High Contrast Mode" aria-label="Toggle high contrast">
+            <i class="fas fa-adjust"></i> <span class="d-none d-sm-inline">Contrast</span>
+          </button>
+
+          <!-- Language Selector -->
+          <div class="top-bar-item d-flex align-items-center gap-1">
+            <i class="fas fa-globe text-warning"></i>
+            <select class="form-select form-select-sm py-0 px-2 bg-transparent text-white border-secondary" id="portal-lang-select" style="font-size: 0.75rem; width: auto;" aria-label="Select Interface Language">
+              <option value="en" class="text-dark" selected>English</option>
+              <option value="ta" class="text-dark">தமிழ் (Tamil)</option>
+              <option value="hi" class="text-dark">हिन्दी (Hindi)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 2. MAIN OFFICIAL HEADER                                                   -->
+  <!-- ========================================================================= -->
+  <header class="gov-main-header">
+    <div class="container-fluid px-lg-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- Brand Emblem & Title -->
+        <a href="home.html" class="portal-brand-wrap" aria-label="Legal Metrology Inspection System Home">
+          <img src="assets/images/govt-seal.svg" alt="Official Legal Metrology Platform Emblem" class="portal-seal-img" width="62" height="62">
+          <div class="portal-titles">
+            <span class="portal-super-title">LEGAL METROLOGY DIGITAL PLATFORM</span>
+            <h1 class="portal-main-title">Smart Legal Metrology Inspection &amp; Compliance System</h1>
+            <p class="portal-sub-title">Digital Inspection, Compliance Verification &amp; Regulatory Monitoring Platform</p>
+          </div>
+        </a>
+
+        <!-- Header Actions -->
+        <div class="d-none d-lg-flex align-items-center gap-3">
+          <div class="header-action-badge">
+            <i class="fas fa-lock text-primary"></i>
+            <span>Portal Status: <strong class="text-success">Operational</strong></span>
+          </div>
+          <a href="login.html" class="btn btn-outline-primary btn-sm px-3 fw-semibold">
+            <i class="fas fa-user-shield me-1"></i> Inspector Login
+          </a>
+          <a href="index.html#dashboard" class="btn btn-primary btn-sm px-3 fw-bold">
+            <i class="fas fa-tachometer-alt me-1"></i> Access Portal
+          </a>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="btn btn-outline-secondary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Open Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 3. PRIMARY NAVIGATION BAR                                                 -->
+  <!-- ========================================================================= -->
+  <nav class="gov-nav-bar d-none d-lg-block" aria-label="Primary Navigation">
+    <div class="container-fluid px-lg-4">
+      <ul class="gov-nav-list">
+        <li class="gov-nav-item">
+          <a href="#hero" class="gov-nav-link active">
+            <i class="fas fa-home"></i> Home
+          </a>
+        </li>
+        <li class="gov-nav-item">
+          <a href="#about" class="gov-nav-link">
+            <i class="fas fa-info-circle"></i> About Platform
+          </a>
+        </li>
+        <li class="gov-nav-item">
+          <a href="#process" class="gov-nav-link">
+            <i class="fas fa-project-diagram"></i> How It Works
+          </a>
+        </li>
+        <li class="gov-nav-item">
+          <a href="#workspace" class="gov-nav-link">
+            <i class="fas fa-th-large"></i> Inspection Services
+          </a>
+        </li>
+        <li class="gov-nav-item">
+          <a href="#console-preview" class="gov-nav-link">
+            <i class="fas fa-laptop-code"></i> Inspector Console
+          </a>
+        </li>
+        <li class="gov-nav-item">
+          <a href="#compliance-framework" class="gov-nav-link">
+            <i class="fas fa-balance-scale"></i> Compliance Framework
+          </a>
+        </li>
+        <li class="gov-nav-item">
+          <a href="#evidence-audit" class="gov-nav-link">
+            <i class="fas fa-fingerprint"></i> Evidence &amp; Audit
+          </a>
+        </li>
+        <li class="gov-nav-item">
+          <a href="#security" class="gov-nav-link">
+            <i class="fas fa-shield-alt"></i> Security
+          </a>
+        </li>
+        <li class="gov-nav-item">
+          <a href="#reports-preview" class="gov-nav-link">
+            <i class="fas fa-file-invoice"></i> Reports
+          </a>
+        </li>
+        <li class="gov-nav-item">
+          <a href="#analytics-preview" class="gov-nav-link">
+            <i class="fas fa-chart-line"></i> Analytics
+          </a>
+        </li>
+        <li class="gov-nav-item">
+          <a href="#user-guide" class="gov-nav-link">
+            <i class="fas fa-book"></i> User Guide
+          </a>
+        </li>
+        <li class="gov-nav-item">
+          <a href="#contact" class="gov-nav-link">
+            <i class="fas fa-headset"></i> Support
+          </a>
+        </li>
+        <li class="gov-nav-item highlight-login ms-auto">
+          <a href="login.html" class="gov-nav-link">
+            <i class="fas fa-sign-in-alt"></i> Authorized Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileNavOffcanvas" aria-labelledby="mobileNavOffcanvasLabel">
+    <div class="offcanvas-header bg-navy text-white">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/images/govt-seal.svg" alt="Seal" width="36" height="36">
+        <h5 class="offcanvas-title fs-6 fw-bold mb-0 text-white" id="mobileNavOffcanvasLabel">SLM-ICS Portal</h5>
+      </div>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><a href="#hero" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-home me-2 text-primary"></i> Home</a></li>
+        <li class="list-group-item"><a href="#about" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-info-circle me-2 text-primary"></i> About Platform</a></li>
+        <li class="list-group-item"><a href="#process" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-project-diagram me-2 text-primary"></i> How It Works</a></li>
+        <li class="list-group-item"><a href="#workspace" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-th-large me-2 text-primary"></i> Inspection Workspace</a></li>
+        <li class="list-group-item"><a href="#console-preview" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-laptop-code me-2 text-primary"></i> Inspector Console</a></li>
+        <li class="list-group-item"><a href="#compliance-framework" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-balance-scale me-2 text-primary"></i> Compliance Framework</a></li>
+        <li class="list-group-item"><a href="#evidence-audit" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-fingerprint me-2 text-primary"></i> Evidence &amp; Audit</a></li>
+        <li class="list-group-item"><a href="#security" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-shield-alt me-2 text-primary"></i> Security &amp; Governance</a></li>
+        <li class="list-group-item"><a href="#reports-preview" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-file-invoice me-2 text-primary"></i> Official Reports</a></li>
+        <li class="list-group-item"><a href="#analytics-preview" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-chart-line me-2 text-primary"></i> Analytics Dashboard</a></li>
+        <li class="list-group-item"><a href="#user-guide" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-book me-2 text-primary"></i> User Guide</a></li>
+        <li class="list-group-item"><a href="#contact" class="text-decoration-none text-dark fw-semibold d-block py-2"><i class="fas fa-headset me-2 text-primary"></i> Contact &amp; Support</a></li>
+      </ul>
+      <div class="p-3">
+        <a href="login.html" class="btn btn-primary w-100 fw-bold mb-2">
+          <i class="fas fa-sign-in-alt me-1"></i> Authorized Login
+        </a>
+        <a href="index.html#dashboard" class="btn btn-outline-primary w-100 fw-semibold">
+          <i class="fas fa-tachometer-alt me-1"></i> Open Portal Dashboard
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Real-Time Notice Ticker -->
+  <div class="gov-ticker-strip">
+    <div class="container-fluid px-lg-4">
+      <div class="d-flex align-items-center">
+        <span class="ticker-badge"><i class="fas fa-bullhorn me-1"></i> NOTIFICATION</span>
+        <div class="ticker-text text-truncate flex-grow-1" id="live-notice-ticker">
+          Legal Metrology (Packaged Commodities) Amendment Rules 2026 compliance engine is currently active in production.
+        </div>
+        <a href="#notices" class="btn btn-sm btn-link text-primary text-decoration-none py-0 px-2 fw-semibold d-none d-sm-inline">
+          View All <i class="fas fa-chevron-right ms-1" style="font-size: 0.7rem;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN CONTENT CONTAINER                                                    -->
+  <!-- ========================================================================= -->
+  <main id="main-content">
+
+    <!-- ======================================================================= -->
+    <!-- 4. HERO SECTION — OFFICIAL PLATFORM IDENTITY                            -->
+    <!-- ======================================================================= -->
+    <section class="gov-hero-section" id="hero">
+      <div class="container-fluid px-lg-4">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="hero-auth-badge">
+              <i class="fas fa-award"></i> DIGITAL GOVERNANCE FRAMEWORK &bull; AUTHORIZED INSPECTION INFRASTRUCTURE
+            </div>
+            
+            <h2 class="hero-main-heading">
+              Smart Legal Metrology Inspection &amp; Compliance System
+            </h2>
+
+            <p class="hero-lead-text">
+              A secure digital platform for efficient product inspection, label verification, compliance assessment, evidence management, and transparent inspection reporting under the Legal Metrology Act, 2009 and Packaged Commodities Rules, 2011.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="login.html" class="hero-btn-primary">
+                <i class="fas fa-id-badge"></i> Access Inspector Portal
+              </a>
+              <a href="index.html#new-inspection" class="hero-btn-secondary">
+                <i class="fas fa-camera"></i> Start Digital Inspection
+              </a>
+            </div>
+
+            <div class="hero-disclaimer-note">
+              <i class="fas fa-info-circle text-warning"></i>
+              <span>For Authorized Inspection Personnel &bull; Directorate of Legal Metrology</span>
+            </div>
+          </div>
+
+          <!-- Hero Mockup Widget -->
+          <div class="col-lg-5">
+            <div class="hero-mockup-card">
+              <div class="mockup-header">
+                <div class="mockup-dots">
+                  <div class="mockup-dot red"></div>
+                  <div class="mockup-dot yellow"></div>
+                  <div class="mockup-dot green"></div>
+                </div>
+                <span class="badge bg-dark border border-secondary text-warning" style="font-size: 0.7rem;">
+                  <i class="fas fa-signal me-1"></i> SYSTEM ONLINE v2.6.4
+                </span>
+              </div>
+              <div class="mockup-body">
+                <div class="d-flex justify-content-between align-items-center mb-3 text-white">
+                  <span class="small fw-semibold text-light">Real-Time Inspection Engine</span>
+                  <span class="badge bg-success" style="font-size: 0.7rem;">Active Node: IN-DEL-01</span>
+                </div>
+
+                <div class="row g-2 mb-3">
+                  <div class="col-6">
+                    <div class="mockup-stat-pill">
+                      <div class="mockup-stat-icon bg-primary text-white">
+                        <i class="fas fa-file-check"></i>
+                      </div>
+                      <div>
+                        <div class="fs-5 fw-bold text-white">14,892</div>
+                        <div class="small text-light" style="font-size: 0.7rem;">Total Inspected</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mockup-stat-pill">
+                      <div class="mockup-stat-icon bg-success text-white">
+                        <i class="fas fa-check-double"></i>
+                      </div>
+                      <div>
+                        <div class="fs-5 fw-bold text-white">84.2%</div>
+                        <div class="small text-light" style="font-size: 0.7rem;">Compliance Rate</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Live Mini Verification Stream -->
+                <div class="p-2 rounded bg-dark border border-secondary text-light small mb-2" style="font-size: 0.75rem; font-family: var(--font-mono);">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="text-warning">&gt; OCR ENGINE [Tesseract+Paddle]</span>
+                    <span class="text-success">READY</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="text-warning">&gt; LMPC 2011 RULE ENGINE [v2.4]</span>
+                    <span class="text-success">LOADED</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-warning">&gt; AUDIT HASH SIGNER [SHA-256]</span>
+                    <span class="text-success">ENGAGED</span>
+                  </div>
+                </div>
+
+                <a href="index.html#dashboard" class="btn btn-sm btn-outline-light w-100 py-2 fw-semibold">
+                  <i class="fas fa-external-link-alt me-1"></i> Open Operational Console Preview
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 5. OFFICIAL TRUST STRIP                                                 -->
+    <!-- ======================================================================= -->
+    <section class="gov-trust-strip" aria-label="Platform Assurance Pillars">
+      <div class="container-fluid px-lg-4">
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="trust-card">
+              <div class="trust-icon-box">
+                <i class="fas fa-shield-virus"></i>
+              </div>
+              <div>
+                <h3 class="trust-title">Secure Digital Workflow</h3>
+                <p class="trust-desc">End-to-end digital processing, role-based controls, and session authentication.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="trust-card">
+              <div class="trust-icon-box">
+                <i class="fas fa-camera-retro"></i>
+              </div>
+              <div>
+                <h3 class="trust-title">Evidence-Based Inspection</h3>
+                <p class="trust-desc">High-resolution image capture with bounding polygon spatial verification.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="trust-card">
+              <div class="trust-icon-box">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <div>
+                <h3 class="trust-title">Rule-Driven Compliance</h3>
+                <p class="trust-desc">Automated evaluation against Packaged Commodities Rules 2011 statutory provisions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="trust-card">
+              <div class="trust-icon-box">
+                <i class="fas fa-history"></i>
+              </div>
+              <div>
+                <h3 class="trust-title">Auditable Records</h3>
+                <p class="trust-desc">Tamper-evident verification logs and permanent digital inspection records.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 6. ABOUT THE PLATFORM                                                  -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-white" id="about">
+      <div class="container-fluid px-lg-4">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <div class="gov-section-header mb-3">
+              <span class="section-eyebrow">DIGITAL GOVERNANCE PLATFORM</span>
+              <h2 class="section-main-heading">Modernizing Packaged Commodity Compliance Verification</h2>
+            </div>
+            
+            <p class="text-secondary leading-relaxed mb-3">
+              The <strong>Smart Legal Metrology Inspection &amp; Compliance System (SLM-ICS)</strong> provides authorized Legal Metrology officers and inspectors with a robust digital governance workspace. The system digitizes on-field and laboratory inspections of pre-packaged commodities, ensuring stringent enforcement of the <em>Legal Metrology Act, 2009</em> and the <em>Legal Metrology (Packaged Commodities) Rules, 2011</em>.
+            </p>
+
+            <p class="text-secondary leading-relaxed mb-4">
+              Inspectors can capture high-resolution commodity labels, extract textual declarations using advanced optical character recognition, structure mandatory metadata, evaluate statutory rule compliance, catalog photographic evidence, and generate digitally signed inspection reports with full audit traceability.
+            </p>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="p-3 bg-light rounded border">
+                  <div class="fw-bold text-navy mb-1"><i class="fas fa-check-circle text-success me-1"></i> Standardized Checks</div>
+                  <div class="small text-muted">Eliminates manual human error and subjective interpretation across inspection zones.</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-light rounded border">
+                  <div class="fw-bold text-navy mb-1"><i class="fas fa-bolt text-warning me-1"></i> Accelerated Turnaround</div>
+                  <div class="small text-muted">Reduces inspection assessment time from hours to under 30 seconds per packaged item.</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="index.html#rules" class="btn btn-outline-primary px-4 fw-semibold">
+              <i class="fas fa-balance-scale me-1"></i> View Statutory Rule Catalog
+            </a>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="p-4 bg-light rounded-3 border shadow-sm">
+              <h3 class="fs-5 fw-bold text-navy mb-3"><i class="fas fa-layer-group text-primary me-2"></i>Institutional Governance Architecture</h3>
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-start gap-3 mb-3 pb-3 border-bottom">
+                  <div class="p-2 rounded bg-white text-primary border shadow-xs"><i class="fas fa-microscope"></i></div>
+                  <div>
+                    <h4 class="fs-6 fw-bold mb-1">Pre-Packaged Commodity Verification</h4>
+                    <p class="small text-secondary mb-0">Automated verification of Net Quantity, MRP (incl. taxes), Manufacturer address, Month/Year of packing, Unit Sale Price (USP), and Country of Origin.</p>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3 mb-3 pb-3 border-bottom">
+                  <div class="p-2 rounded bg-white text-primary border shadow-xs"><i class="fas fa-balance-scale-right"></i></div>
+                  <div>
+                    <h4 class="fs-6 fw-bold mb-1">Statutory Rule Engine</h4>
+                    <p class="small text-secondary mb-0">Configurable backend rules verifying font sizes, declared quantities against Second Schedule standard units, and dual-unit packaging compliance.</p>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <div class="p-2 rounded bg-white text-primary border shadow-xs"><i class="fas fa-file-contract"></i></div>
+                  <div>
+                    <h4 class="fs-6 fw-bold mb-1">Evidentiary Record Dossier</h4>
+                    <p class="small text-secondary mb-0">Automatic generation of formal Show Cause Notices, Panchnama dossiers, and QR-verifiable certificates for regulatory enforcement.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 7. HOW THE DIGITAL INSPECTION WORKS (6-STEP WORKFLOW)                   -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-light" id="process">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">STANDARDIZED WORKFLOW</span>
+          <h2 class="section-main-heading">How Digital Inspection Operates</h2>
+          <p class="section-sub-text mx-auto">
+            A step-by-step, transparent, and auditable 6-stage inspection protocol ensuring systematic verification from physical label capture to official certificate generation.
+          </p>
+        </div>
+
+        <div class="row g-3">
+          <!-- Step 1 -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+            <div class="workflow-step-card">
+              <div class="workflow-badge-num">1</div>
+              <div class="workflow-icon-wrap">
+                <i class="fas fa-camera"></i>
+              </div>
+              <h3 class="workflow-step-title">Capture / Upload</h3>
+              <p class="workflow-step-desc">Inspector captures or uploads commodity label photos using mobile camera or optical scanner.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+            <div class="workflow-step-card">
+              <div class="workflow-badge-num">2</div>
+              <div class="workflow-icon-wrap">
+                <i class="fas fa-sliders-h"></i>
+              </div>
+              <h3 class="workflow-step-title">Image Processing</h3>
+              <p class="workflow-step-desc">Interactive image normalization, perspective correction, contrast enhancement, and noise reduction.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+            <div class="workflow-step-card">
+              <div class="workflow-badge-num">3</div>
+              <div class="workflow-icon-wrap">
+                <i class="fas fa-font"></i>
+              </div>
+              <h3 class="workflow-step-title">OCR Extraction</h3>
+              <p class="workflow-step-desc">Optical character recognition engine identifies raw text lines with localized bounding boxes.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+            <div class="workflow-step-card">
+              <div class="workflow-badge-num">4</div>
+              <div class="workflow-icon-wrap">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3 class="workflow-step-title">AI Structuring</h3>
+              <p class="workflow-step-desc">Machine intelligence maps raw strings into structured statutory fields with confidence ratings.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+            <div class="workflow-step-card">
+              <div class="workflow-badge-num">5</div>
+              <div class="workflow-icon-wrap">
+                <i class="fas fa-balance-scale"></i>
+              </div>
+              <h3 class="workflow-step-title">Rule Evaluation</h3>
+              <p class="workflow-step-desc">Automated rules engine checks declarations against LMPC 2011 clauses and schedules.</p>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+            <div class="workflow-step-card">
+              <div class="workflow-badge-num">6</div>
+              <div class="workflow-icon-wrap">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3 class="workflow-step-title">Verification &amp; Report</h3>
+              <p class="workflow-step-desc">Authorized officer reviews findings, confirms decisions, and generates an official report.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 p-3 bg-white rounded border d-flex align-items-center gap-3">
+          <i class="fas fa-user-check text-primary fs-4"></i>
+          <span class="small text-secondary">
+            <strong>Human-in-the-Loop Safeguard:</strong> All automated AI and OCR extractions serve as decision support tools. Final statutory determinations, show cause notices, and enforcement actions remain strictly under the authority of authorized Legal Metrology officers.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 8. DIGITAL INSPECTION FEATURE SECTION (12 FEATURE CARDS)                -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-white" id="workspace">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">SYSTEM CAPABILITIES</span>
+          <h2 class="section-main-heading">Digital Inspection Workspace</h2>
+          <p class="section-sub-text mx-auto">
+            Comprehensive suite of specialized inspection modules engineered specifically for enforcement of statutory packaged commodity regulations.
+          </p>
+        </div>
+
+        <div class="row g-3">
+          <!-- Card 1 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-upload"></i></div>
+              <h3 class="feature-card-title">Product Image Capture</h3>
+              <p class="feature-card-desc">Multi-angle photographic capture of packaged commodities with automated resolution validation.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-video"></i></div>
+              <h3 class="feature-card-title">Camera-Based Scanning</h3>
+              <p class="feature-card-desc">Real-time WebRTC camera feed integration for live field label capture directly on tablet or mobile.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-i-cursor"></i></div>
+              <h3 class="feature-card-title">OCR Text Extraction</h3>
+              <p class="feature-card-desc">Multi-lingual text extraction with high-precision bounding box detection across curved surfaces.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-network-wired"></i></div>
+              <h3 class="feature-card-title">AI-Assisted Structuring</h3>
+              <p class="feature-card-desc">Automated classification of extracted text into MRP, Net Quantity, Dates, Origin, and Manufacturer.</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-check-circle"></i></div>
+              <h3 class="feature-card-title">Compliance Evaluation</h3>
+              <p class="feature-card-desc">Evaluates 7 core statutory declarations with precise clause references to the Legal Metrology Rules.</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-exclamation-triangle"></i></div>
+              <h3 class="feature-card-title">Violation Detection</h3>
+              <p class="feature-card-desc">Automated identification of missing tax clauses, non-standard quantities, and omitted origins.</p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-images"></i></div>
+              <h3 class="feature-card-title">Evidence Management</h3>
+              <p class="feature-card-desc">Cryptographically hashed evidence repository linking visual crops directly to inspection audit logs.</p>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-user-edit"></i></div>
+              <h3 class="feature-card-title">Human Verification Desk</h3>
+              <p class="feature-card-desc">Dedicated officer override workstation for review, confidence validation, and manual corrections.</p>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-archive"></i></div>
+              <h3 class="feature-card-title">Inspection Registry</h3>
+              <p class="feature-card-desc">Searchable digital archive of all completed inspections with advanced filtering by brand, date, and zone.</p>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-file-pdf"></i></div>
+              <h3 class="feature-card-title">Digital Reports &amp; Notices</h3>
+              <p class="feature-card-desc">Instant generation of A4 printable compliance certificates and formal Show Cause Notices with QR verification.</p>
+            </div>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-chart-pie"></i></div>
+              <h3 class="feature-card-title">Analytics Dashboard</h3>
+              <p class="feature-card-desc">Executive visualization of compliance trends, violation hot-spots, and regional enforcement metrics.</p>
+            </div>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gov-feature-card">
+              <div class="feature-icon-box"><i class="fas fa-cogs"></i></div>
+              <h3 class="feature-card-title">Rule &amp; User Administration</h3>
+              <p class="feature-card-desc">Role-based access management, statutory rule threshold adjustments, and audit trail monitoring.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 9. INSPECTOR WORKSPACE PREVIEW (LIVE MOCK CONSOLE)                     -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-light" id="console-preview">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">OPERATIONAL CONSOLE</span>
+          <h2 class="section-main-heading">Inspector Workspace Console</h2>
+          <p class="section-sub-text mx-auto">
+            Live interactive preview of the officer dashboard showing real-time commodity assessments and compliance statuses.
+          </p>
+        </div>
+
+        <div class="console-preview-wrapper">
+          <div class="console-topbar">
+            <div class="d-flex align-items-center gap-2">
+              <i class="fas fa-terminal text-warning"></i>
+              <span class="fw-bold font-monospace">LEGAL METROLOGY INSPECTION CONSOLE</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge bg-success font-monospace"><i class="fas fa-circle text-white me-1" style="font-size: 0.5rem;"></i> LIVE GATEWAY</span>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <!-- Console KPIs -->
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-lg-3">
+                <div class="console-stat-kpi">
+                  <div>
+                    <div class="console-kpi-val">14,892</div>
+                    <div class="console-kpi-label">Total Inspected</div>
+                  </div>
+                  <div class="text-primary fs-3"><i class="fas fa-boxes"></i></div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="console-stat-kpi">
+                  <div>
+                    <div class="console-kpi-val text-success">12,540</div>
+                    <div class="console-kpi-label">Compliant Units</div>
+                  </div>
+                  <div class="text-success fs-3"><i class="fas fa-check-circle"></i></div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="console-stat-kpi">
+                  <div>
+                    <div class="console-kpi-val text-danger">1,756</div>
+                    <div class="console-kpi-label">Statutory Violations</div>
+                  </div>
+                  <div class="text-danger fs-3"><i class="fas fa-times-circle"></i></div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="console-stat-kpi">
+                  <div>
+                    <div class="console-kpi-val text-warning">596</div>
+                    <div class="console-kpi-label">Review Required</div>
+                  </div>
+                  <div class="text-warning fs-3"><i class="fas fa-hourglass-half"></i></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Table Filters -->
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+              <div class="btn-group btn-group-sm" role="group" aria-label="Console Filter Controls">
+                <button type="button" class="btn btn-primary active mock-console-filter" data-filter="all">All Inspections</button>
+                <button type="button" class="btn btn-outline-secondary mock-console-filter" data-filter="compliant">Compliant</button>
+                <button type="button" class="btn btn-outline-secondary mock-console-filter" data-filter="violation">Violations</button>
+                <button type="button" class="btn btn-outline-secondary mock-console-filter" data-filter="review">Review Required</button>
+              </div>
+
+              <div class="d-flex gap-2">
+                <a href="index.html#dashboard" class="btn btn-sm btn-primary fw-bold">
+                  <i class="fas fa-external-link-alt me-1"></i> Open Full Inspector Workspace
+                </a>
+              </div>
+            </div>
+
+            <!-- Mock Table -->
+            <div class="table-responsive">
+              <table class="table table-hover align-middle border mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>Inspection ID</th>
+                    <th>Product &amp; Commodity</th>
+                    <th>Category</th>
+                    <th>Inspection Date</th>
+                    <th>Compliance Status</th>
+                    <th>Score</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="mock-console-tbody">
+                  <tr data-status="violation">
+                    <td><span class="font-monospace fw-bold text-primary">INSP-2026-0901</span></td>
+                    <td>
+                      <div class="fw-bold">Britannia Treat Cookies 150g</div>
+                      <div class="small text-muted">Brand: Britannia Industries Ltd.</div>
+                    </td>
+                    <td><span class="badge bg-light text-dark border">Food &amp; Bakery</span></td>
+                    <td>2026-09-10 14:22</td>
+                    <td><span class="badge bg-danger"><i class="fas fa-times-circle me-1"></i> Non-Compliant</span></td>
+                    <td><span class="fw-bold text-danger">62%</span></td>
+                    <td><a href="index.html#inspection-details?id=INSP-2026-0901" class="btn btn-xs btn-outline-primary py-1 px-2">View Audit</a></td>
+                  </tr>
+                  <tr data-status="review">
+                    <td><span class="font-monospace fw-bold text-primary">INSP-2026-0902</span></td>
+                    <td>
+                      <div class="fw-bold">Himalaya Purifying Neem Face Wash</div>
+                      <div class="small text-muted">Brand: Himalaya Wellness Company</div>
+                    </td>
+                    <td><span class="badge bg-light text-dark border">Cosmetics</span></td>
+                    <td>2026-09-10 12:45</td>
+                    <td><span class="badge bg-warning text-dark"><i class="fas fa-exclamation-circle me-1"></i> Review Required</span></td>
+                    <td><span class="fw-bold text-warning">84%</span></td>
+                    <td><a href="index.html#inspection-details?id=INSP-2026-0902" class="btn btn-xs btn-outline-primary py-1 px-2">View Audit</a></td>
+                  </tr>
+                  <tr data-status="compliant">
+                    <td><span class="font-monospace fw-bold text-primary">INSP-2026-0903</span></td>
+                    <td>
+                      <div class="fw-bold">Fortune Sunlite Refined Sunflower Oil 1L</div>
+                      <div class="small text-muted">Brand: Adani Wilmar Limited</div>
+                    </td>
+                    <td><span class="badge bg-light text-dark border">Edible Oils</span></td>
+                    <td>2026-09-10 11:10</td>
+                    <td><span class="badge bg-success"><i class="fas fa-check-circle me-1"></i> 100% Compliant</span></td>
+                    <td><span class="fw-bold text-success">100%</span></td>
+                    <td><a href="index.html#inspection-details?id=INSP-2026-0903" class="btn btn-xs btn-outline-primary py-1 px-2">View Audit</a></td>
+                  </tr>
+                  <tr data-status="violation">
+                    <td><span class="font-monospace fw-bold text-primary">INSP-2026-0904</span></td>
+                    <td>
+                      <div class="fw-bold">boAt Airdopes 141 Bluetooth Earbuds</div>
+                      <div class="small text-muted">Brand: Imagine Marketing Ltd.</div>
+                    </td>
+                    <td><span class="badge bg-light text-dark border">Electronics</span></td>
+                    <td>2026-09-09 16:30</td>
+                    <td><span class="badge bg-danger"><i class="fas fa-times-circle me-1"></i> Non-Compliant</span></td>
+                    <td><span class="fw-bold text-danger">54%</span></td>
+                    <td><a href="index.html#inspection-details?id=INSP-2026-0904" class="btn btn-xs btn-outline-primary py-1 px-2">View Audit</a></td>
+                  </tr>
+                  <tr data-status="compliant">
+                    <td><span class="font-monospace fw-bold text-primary">INSP-2026-0905</span></td>
+                    <td>
+                      <div class="fw-bold">Daawat Rozana Super Basmati Rice 5kg</div>
+                      <div class="small text-muted">Brand: LT Foods Limited</div>
+                    </td>
+                    <td><span class="badge bg-light text-dark border">Grains &amp; Cereals</span></td>
+                    <td>2026-09-09 10:15</td>
+                    <td><span class="badge bg-success"><i class="fas fa-check-circle me-1"></i> 100% Compliant</span></td>
+                    <td><span class="fw-bold text-success">100%</span></td>
+                    <td><a href="index.html#inspection-details?id=INSP-2026-0905" class="btn btn-xs btn-outline-primary py-1 px-2">View Audit</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 10. COMPLIANCE INTELLIGENCE SECTION                                     -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-white" id="compliance-framework">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">STATUTORY VERIFICATION</span>
+          <h2 class="section-main-heading">Compliance Intelligence Framework</h2>
+          <p class="section-sub-text mx-auto">
+            Automated verification parameters aligned with the Packaged Commodities Rules, 2011. Configurable backend rules validate every mandatory declaration.
+          </p>
+        </div>
+
+        <div class="row g-3">
+          <!-- Item 1 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 bg-light rounded border h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary text-white">Rule 6(1)(a)</span>
+                <span class="badge bg-success">Verified</span>
+              </div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Product Identity</h3>
+              <p class="small text-secondary mb-0">Generic name of the commodity declared prominently on the Principal Display Panel.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 bg-light rounded border h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary text-white">Rule 6(1)(b)</span>
+                <span class="badge bg-success">Verified</span>
+              </div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Declared Net Quantity</h3>
+              <p class="small text-secondary mb-0">Standard weight, measure, or numerical count verified in SI units (g, kg, mL, L).</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 bg-light rounded border h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger text-white">Rule 6(1)(e)</span>
+                <span class="badge bg-danger">Non-Compliant</span>
+              </div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">MRP &amp; Tax Clause</h3>
+              <p class="small text-secondary mb-0">Maximum Retail Price declaration must explicitly include "Inclusive of all taxes".</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 bg-light rounded border h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary text-white">Rule 6(1)(d)</span>
+                <span class="badge bg-warning text-dark">Review Req.</span>
+              </div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Manufacturer Address</h3>
+              <p class="small text-secondary mb-0">Complete physical name and address of manufacturer, packer, or importer.</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 bg-light rounded border h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger text-white">Rule 6(1)(a)</span>
+                <span class="badge bg-danger">Non-Compliant</span>
+              </div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Country of Origin</h3>
+              <p class="small text-secondary mb-0">Mandatory declaration of manufacturing origin on all imported commodities.</p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 bg-light rounded border h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary text-white">Rule 6(1)(f)</span>
+                <span class="badge bg-success">Verified</span>
+              </div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Packing / Import Date</h3>
+              <p class="small text-secondary mb-0">Month and Year in which the commodity is manufactured or pre-packed.</p>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 bg-light rounded border h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary text-white">Rule 6(1)(g)</span>
+                <span class="badge bg-success">Verified</span>
+              </div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Unit Sale Price (USP)</h3>
+              <p class="small text-secondary mb-0">Price per g/kg/mL/L prominently declared alongside the overall retail price.</p>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 bg-light rounded border h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary text-white">Rule 9</span>
+                <span class="badge bg-success">Verified</span>
+              </div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Font Size Compliance</h3>
+              <p class="small text-secondary mb-0">Minimum numeral and letter heights determined by package area in Table-I.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <span class="text-muted small">
+            <i class="fas fa-cog me-1"></i> Note: Regulatory rule definitions, thresholds, and penalty schedules are dynamically loaded from the central backend configuration catalog.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 11. EVIDENCE & ACCOUNTABILITY SECTION                                   -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-light" id="evidence-audit">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">CHAIN OF CUSTODY</span>
+          <h2 class="section-main-heading">Evidence &amp; Traceable Accountability</h2>
+          <p class="section-sub-text mx-auto">
+            Every inspection finding is cryptographically tied to high-resolution photographic evidence with spatial bounding coordinates and immutable timestamps.
+          </p>
+        </div>
+
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <div class="evidence-preview-box">
+              <div class="d-flex justify-content-between text-white small mb-2">
+                <span><i class="fas fa-camera text-warning me-1"></i> Raw Visual Capture: Britannia Treat 150g</span>
+                <span class="badge bg-danger">VIOLATION DETECTED</span>
+              </div>
+              <img src="assets/images/label-cookies.svg" alt="Sample Commodity Label with Bounding Highlight" class="evidence-sample-img">
+              <div class="mt-2 text-warning small font-monospace text-start">
+                <i class="fas fa-crosshairs me-1"></i> Bounding Box: [x: 48, y: 312, w: 280, h: 46] &bull; Confidence: 94.6%
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="p-4 bg-white rounded border shadow-sm">
+              <h3 class="fs-5 fw-bold text-navy mb-3"><i class="fas fa-fingerprint text-primary me-2"></i>Structured Finding Ledger</h3>
+              
+              <div class="table-responsive">
+                <table class="table table-sm table-bordered evidence-finding-table mb-3">
+                  <tbody>
+                    <tr>
+                      <th class="bg-light w-40">Evidence ID</th>
+                      <td class="font-monospace fw-semibold text-primary">EVD-2026-09-8821-01</td>
+                    </tr>
+                    <tr>
+                      <th class="bg-light">Inspection Record</th>
+                      <td class="font-monospace">INSP-2026-0901</td>
+                    </tr>
+                    <tr>
+                      <th class="bg-light">Timestamp</th>
+                      <td>2026-09-10 14:22:18 IST</td>
+                    </tr>
+                    <tr>
+                      <th class="bg-light">Statutory Finding</th>
+                      <td class="text-danger fw-semibold">MRP declared as ₹35.00 without "(Incl. of all taxes)"</td>
+                    </tr>
+                    <tr>
+                      <th class="bg-light">Applicable Rule</th>
+                      <td>Rule 6(1)(e) &amp; Section 18 / 36(1)</td>
+                    </tr>
+                    <tr>
+                      <th class="bg-light">Evidence SHA-256</th>
+                      <td class="font-monospace text-truncate small" style="max-width: 200px;">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</td>
+                    </tr>
+                    <tr>
+                      <th class="bg-light">Inspector Sign-off</th>
+                      <td><span class="badge bg-success"><i class="fas fa-signature me-1"></i> Digitally Signed (Officer #LM-8841)</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="alert alert-secondary py-2 px-3 small mb-0">
+                <i class="fas fa-lock text-primary me-1"></i> Evidence hashes are immutably archived to support statutory quasi-judicial proceedings and appellate reviews.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 12. HUMAN-IN-THE-LOOP INSPECTOR VERIFICATION SECTION                    -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-white" id="human-in-the-loop">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">RESPONSIBLE DIGITAL GOVERNANCE</span>
+          <h2 class="section-main-heading">Human-in-the-Loop Officer Verification</h2>
+          <p class="section-sub-text mx-auto">
+            AI algorithms assist in reading and structuring declarations. Authorized officers retain full decision-making control to verify, modify, or override findings.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="hil-desk-card">
+              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3 pb-3 border-bottom">
+                <div>
+                  <h3 class="fs-6 fw-bold text-navy mb-0">Interactive Verification Terminal</h3>
+                  <span class="small text-muted">Commodity: Himalaya Neem Face Wash 100mL (Batch #HN-482)</span>
+                </div>
+                <div id="hil-status-badge" class="badge bg-warning text-dark px-3 py-2">
+                  <i class="fas fa-hourglass-half me-1"></i> PENDING OFFICER REVIEW
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <div class="p-3 bg-light rounded border">
+                    <div class="small text-muted fw-bold mb-1">AI/OCR EXTRACTED FINDING</div>
+                    <div class="fs-6 fw-semibold text-dark mb-2">Manufacturer address detected with 68.2% optical confidence score.</div>
+                    <div class="progress mb-2" style="height: 8px;">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 68%;" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex justify-content-between small text-muted">
+                      <span>Threshold: 85%</span>
+                      <span class="fw-bold text-warning">Flagged for Manual Verification</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="p-3 bg-light rounded border">
+                    <div class="small text-muted fw-bold mb-1">INSPECTOR ACTION DESK</div>
+                    <div class="hil-action-btn-group d-flex gap-2 flex-wrap mb-2">
+                      <button type="button" class="btn btn-success btn-sm" id="hil-btn-approve">
+                        <i class="fas fa-check me-1"></i> Approve Finding
+                      </button>
+                      <button type="button" class="btn btn-danger btn-sm" id="hil-btn-reject">
+                        <i class="fas fa-gavel me-1"></i> Issue Notice
+                      </button>
+                      <button type="button" class="btn btn-outline-secondary btn-sm" id="hil-btn-reinspect">
+                        <i class="fas fa-sync me-1"></i> Request Lab Sample
+                      </button>
+                    </div>
+                    <div class="small text-muted">Click an action above to simulate interactive verification.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-2 bg-light rounded border">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge bg-dark font-monospace">AUDIT LOG</span>
+                  <div id="hil-audit-log" class="small text-muted">Awaiting inspector verification decision...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 13. SECURITY & DATA GOVERNANCE SECTION (8 CARDS)                        -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-light" id="security">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">INSTITUTIONAL TRUST</span>
+          <h2 class="section-main-heading">Security &amp; Data Governance</h2>
+          <p class="section-sub-text mx-auto">
+            Engineered in strict accordance with public-sector digital governance principles, ensuring data sovereignty, confidentiality, and integrity.
+          </p>
+        </div>
+
+        <div class="row g-3">
+          <!-- Card 1 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="gov-security-card">
+              <div class="security-icon"><i class="fas fa-users-cog"></i></div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Role-Based Access (RBAC)</h3>
+              <p class="small text-muted mb-0">Distinct permission tiers for Field Inspectors, Senior Metrology Officers, and Central Administrators.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="gov-security-card">
+              <div class="security-icon"><i class="fas fa-key"></i></div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Secure Authentication</h3>
+              <p class="small text-muted mb-0">Multi-factor authentication (MFA), JSON Web Tokens with automated session expiration safeguards.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="gov-security-card">
+              <div class="security-icon"><i class="fas fa-clipboard-list"></i></div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Tamper-Evident Audit Trail</h3>
+              <p class="small text-muted mb-0">Every inspection action, modification, and sign-off is logged with timestamp, officer ID, and IP address.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="gov-security-card">
+              <div class="security-icon"><i class="fas fa-hashtag"></i></div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Cryptographic Evidence Hash</h3>
+              <p class="small text-muted mb-0">All uploaded commodity photographs are hashed using SHA-256 to guarantee evidential chain-of-custody.</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="gov-security-card">
+              <div class="security-icon"><i class="fas fa-sliders-h"></i></div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Controlled Rule Configuration</h3>
+              <p class="small text-muted mb-0">Statutory threshold changes require multi-officer approval and are version-controlled in the database.</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="gov-security-card">
+              <div class="security-icon"><i class="fas fa-shield-alt"></i></div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Session Security</h3>
+              <p class="small text-muted mb-0">Automated idle lockout, cross-site request forgery (CSRF) protection, and sanitized query parameters.</p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="gov-security-card">
+              <div class="security-icon"><i class="fas fa-database"></i></div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Data Integrity Protocols</h3>
+              <p class="small text-muted mb-0">Relational consistency, automated backup replication, and zero client-side storage of confidential keys.</p>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="gov-security-card">
+              <div class="security-icon"><i class="fas fa-qrcode"></i></div>
+              <h3 class="fs-6 fw-bold text-navy mb-1">Official Report Verification</h3>
+              <p class="small text-muted mb-0">Every inspection certificate includes a cryptographic QR code allowing instant public verification.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 14. STATUTORY REPORTING SECTION                                         -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-white" id="reports-preview">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">LEGAL ENFORCEMENT</span>
+          <h2 class="section-main-heading">Official Inspection Certificates &amp; Reports</h2>
+          <p class="section-sub-text mx-auto">
+            High-fidelity A4 document generator outputting official inspection dossiers, Show Cause Notices, and compliance certificates.
+          </p>
+        </div>
+
+        <div class="row align-items-center g-4 justify-content-center">
+          <div class="col-lg-7">
+            <div class="report-paper-card report-watermark-bg">
+              <!-- Report Top Header -->
+              <div class="d-flex justify-content-between align-items-center pb-3 border-bottom mb-3">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="assets/images/govt-seal.svg" alt="Seal" class="report-header-seal">
+                  <div>
+                    <div class="fw-bold fs-6 text-uppercase">Directorate of Legal Metrology</div>
+                    <div class="small text-muted" style="font-size: 0.75rem;">DEPARTMENT OF CONSUMER AFFAIRS &bull; GOVERNMENT OF INDIA</div>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <div class="badge bg-danger">SHOW CAUSE NOTICE</div>
+                  <div class="small font-monospace text-muted mt-1">REF: GOV/LMPC/2026/09/8821</div>
+                </div>
+              </div>
+
+              <!-- Certificate Body -->
+              <div class="small mb-3">
+                <p class="mb-2"><strong>To:</strong> M/s Britannia Industries Ltd., 5/1A Hungerford Street, Kolkata - 700017</p>
+                <p class="mb-2"><strong>Subject:</strong> Notice of Statutory Non-Compliance under Rule 6(1)(e) of the Legal Metrology (Packaged Commodities) Rules, 2011.</p>
+                <p class="text-secondary mb-3">Upon digital optical inspection of pre-packaged commodity sample <em>"Britannia Treat Cookies 150g"</em> (Batch #BT-9902), the following statutory omission was recorded:</p>
+                
+                <table class="table table-bordered table-sm small mb-3">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Declaration</th>
+                      <th>Observed Value</th>
+                      <th>Statutory Requirement</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Maximum Retail Price (MRP)</td>
+                      <td>₹35.00</td>
+                      <td>₹35.00 (Inclusive of all taxes)</td>
+                      <td class="text-danger fw-bold">VIOLATION</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Sign-off block -->
+              <div class="d-flex justify-content-between align-items-end pt-3 border-top">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="p-1 bg-white border"><i class="fas fa-qrcode fs-2 text-dark"></i></div>
+                  <div class="small font-monospace text-muted" style="font-size: 0.65rem;">
+                    SCAN TO VERIFY RECORD<br>
+                    UUID: 8821-4f9a-8e2b
+                  </div>
+                </div>
+                <div class="text-end">
+                  <div class="font-monospace fw-bold text-primary" style="font-size: 0.75rem;">[DIGITALLY SIGNED]</div>
+                  <div class="small fw-semibold">Inspector S. R. Sharma</div>
+                  <div class="text-muted" style="font-size: 0.7rem;">Legal Metrology Officer, Zone-IV</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="p-4 bg-light rounded border">
+              <h3 class="fs-5 fw-bold text-navy mb-3"><i class="fas fa-print text-primary me-2"></i>Automated Reporting Pipeline</h3>
+              <p class="text-secondary small mb-3">
+                The platform automatically formats inspection findings into print-ready A4 certificates adhering to official government typography and layout standards.
+              </p>
+
+              <ul class="list-unstyled small text-secondary mb-4">
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Standardized Panchnama &amp; Seizure Memo templates</li>
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Automated section &amp; penalty clause citations</li>
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Embedded QR code for third-party judicial validation</li>
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> One-click export to PDF or high-resolution printout</li>
+              </ul>
+
+              <div class="d-flex gap-2 flex-wrap">
+                <a href="index.html#reports" class="btn btn-primary btn-sm fw-bold px-3">
+                  <i class="fas fa-file-pdf me-1"></i> View Sample Reports
+                </a>
+                <a href="index.html#new-inspection" class="btn btn-outline-primary btn-sm fw-semibold px-3">
+                  <i class="fas fa-plus-circle me-1"></i> Generate New Inspection
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 15. ANALYTICS & ENFORCEMENT TRENDS (CHART.JS)                           -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-light" id="analytics-preview">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">EXECUTIVE INTELLIGENCE</span>
+          <h2 class="section-main-heading">Analytics &amp; Enforcement Trends</h2>
+          <p class="section-sub-text mx-auto">
+            Interactive analytical dashboards delivering macro and micro insights into commodity compliance rates across national zones.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Chart 1: Trends -->
+          <div class="col-12 col-lg-6">
+            <div class="p-3 bg-white rounded border shadow-sm h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="fs-6 fw-bold text-navy mb-0"><i class="fas fa-chart-line text-primary me-2"></i>Monthly Inspection Volume</h3>
+                <span class="badge bg-light text-dark border">FY 2025–26</span>
+              </div>
+              <div style="height: 250px;">
+                <canvas id="chart-home-trends"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart 2: Compliance Distribution -->
+          <div class="col-12 col-lg-6">
+            <div class="p-3 bg-white rounded border shadow-sm h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="fs-6 fw-bold text-navy mb-0"><i class="fas fa-chart-pie text-success me-2"></i>Compliance Breakdown</h3>
+                <span class="badge bg-light text-dark border">National Aggregate</span>
+              </div>
+              <div style="height: 250px;">
+                <canvas id="chart-home-compliance"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart 3: Violations -->
+          <div class="col-12 col-lg-6">
+            <div class="p-3 bg-white rounded border shadow-sm h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="fs-6 fw-bold text-navy mb-0"><i class="fas fa-exclamation-circle text-danger me-2"></i>Top Statutory Violation Categories</h3>
+                <span class="badge bg-danger text-white">Rule Breaches</span>
+              </div>
+              <div style="height: 250px;">
+                <canvas id="chart-home-violations"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart 4: Regional Activity -->
+          <div class="col-12 col-lg-6">
+            <div class="p-3 bg-white rounded border shadow-sm h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="fs-6 fw-bold text-navy mb-0"><i class="fas fa-map-marked-alt text-warning me-2"></i>Regional Enforcement Activity</h3>
+                <span class="badge bg-light text-dark border">Zonal Comparison</span>
+              </div>
+              <div style="height: 250px;">
+                <canvas id="chart-home-regional"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="index.html#analytics" class="btn btn-primary px-4 fw-bold">
+            <i class="fas fa-chart-bar me-1"></i> Open Live Analytics Console
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 16. PUBLIC / USER INFORMATION SECTION                                   -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-white" id="user-guide">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">INSPECTOR ONBOARDING</span>
+          <h2 class="section-main-heading">Standard Operating Procedure Guide</h2>
+          <p class="section-sub-text mx-auto">
+            Step-by-step guidance for authorized officers conducting field inspections through the digital platform.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-10">
+            <div class="accordion" id="sopAccordion">
+              <div class="accordion-item border mb-2">
+                <h3 class="accordion-header" id="headingOne">
+                  <button class="accordion-button fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="badge bg-primary me-2">Step 1</span> Officer Authentication &amp; 2FA Sign-In
+                  </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#sopAccordion">
+                  <div class="accordion-body small text-secondary">
+                    Authorized inspectors log in using government credentials, complete multi-factor verification, and select their assigned enforcement zone or field station.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border mb-2">
+                <h3 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <span class="badge bg-primary me-2">Step 2</span> Commodity Label Optical Capture
+                  </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#sopAccordion">
+                  <div class="accordion-body small text-secondary">
+                    Capture clear, well-lit photographs of the Principal Display Panel (PDP) and mandatory declaration panels. Ensure the entire label is framed without excessive glare or perspective skew.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border mb-2">
+                <h3 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <span class="badge bg-primary me-2">Step 3</span> OCR Text Extraction &amp; Quality Check
+                  </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#sopAccordion">
+                  <div class="accordion-body small text-secondary">
+                    The platform automatically extracts text segments and highlights bounding polygons. Inspectors review bounding boxes to verify complete textual capture across multilingual declarations.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border mb-2">
+                <h3 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <span class="badge bg-primary me-2">Step 4</span> Automated Rule Compliance Evaluation
+                  </button>
+                </h3>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#sopAccordion">
+                  <div class="accordion-body small text-secondary">
+                    Extracted values are structured into MRP, Net Quantity, Dates, Origin, and Manufacturer. The rule engine validates each declaration against the Packaged Commodities Rules 2011.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border mb-2">
+                <h3 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <span class="badge bg-primary me-2">Step 5</span> Officer Review &amp; Statutory Determination
+                  </button>
+                </h3>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#sopAccordion">
+                  <div class="accordion-body small text-secondary">
+                    The inspector reviews any flagged non-compliances, attaches additional physical evidence if required, specifies statutory remarks, and records an official determination.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border">
+                <h3 class="accordion-header" id="headingSix">
+                  <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <span class="badge bg-primary me-2">Step 6</span> Inspection Dossier Generation &amp; Archival
+                  </button>
+                </h3>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#sopAccordion">
+                  <div class="accordion-body small text-secondary">
+                    The system generates a cryptographically signed Inspection Certificate or formal Show Cause Notice with a unique verification QR code and archives it in the central registry.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 17. OFFICIAL NOTICE / ANNOUNCEMENT AREA                                 -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-light" id="notices">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">REGULATORY CIRCULARS</span>
+          <h2 class="section-main-heading">Official Notices &amp; Gazette Updates</h2>
+          <p class="section-sub-text mx-auto">
+            Latest statutory advisories, amendment circulars, and system maintenance notifications.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="notice-board-card shadow-sm">
+              <div class="notice-board-header">
+                <span><i class="fas fa-bullhorn text-warning me-2"></i>Central Regulatory Notice Board</span>
+                <span class="badge bg-primary">Active Notices</span>
+              </div>
+
+              <div class="notice-item">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="badge bg-danger">HIGH PRIORITY</span>
+                  <span class="small text-muted font-monospace">2026-09-08 11:30 IST</span>
+                </div>
+                <h3 class="fs-6 fw-bold text-navy mb-1">Circular No. LM-88/2026: Mandatory Unit Sale Price (USP) Display</h3>
+                <p class="small text-secondary mb-0">Enforcement officers must verify that all pre-packaged commodities distributed via ecommerce platforms include clear Unit Sale Price declarations as per amended Rule 6(1)(g).</p>
+              </div>
+
+              <div class="notice-item">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="badge bg-primary">SYSTEM ADVISORY</span>
+                  <span class="small text-muted font-monospace">2026-09-05 16:00 IST</span>
+                </div>
+                <h3 class="fs-6 fw-bold text-navy mb-1">Release Notice: Rule Engine Update v2.4 Active</h3>
+                <p class="small text-secondary mb-0">Updated OCR confidence thresholds and standard packaging unit validators have been successfully deployed across all regional inspection nodes.</p>
+              </div>
+
+              <div class="notice-item">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="badge bg-secondary">MAINTENANCE</span>
+                  <span class="small text-muted font-monospace">2026-09-01 09:00 IST</span>
+                </div>
+                <h3 class="fs-6 fw-bold text-navy mb-1">Scheduled Server Maintenance Window</h3>
+                <p class="small text-secondary mb-0">Routine database optimization scheduled every Sunday between 02:00 AM and 04:00 AM IST. Offline scanner caching will remain operational.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 18. CONTACT & TECHNICAL SUPPORT SECTION                                -->
+    <!-- ======================================================================= -->
+    <section class="py-5 bg-white" id="contact">
+      <div class="container-fluid px-lg-4">
+        <div class="gov-section-header text-center mx-auto" style="max-width: 800px;">
+          <span class="section-eyebrow">OFFICER ASSISTANCE</span>
+          <h2 class="section-main-heading">Helpdesk &amp; Technical Support</h2>
+          <p class="section-sub-text mx-auto">
+            Dedicated assistance channels for authorized Legal Metrology personnel, field inspectors, and administrative users.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-5">
+            <div class="p-4 bg-light rounded border h-100">
+              <h3 class="fs-5 fw-bold text-navy mb-3"><i class="fas fa-headset text-primary me-2"></i>Official Support Channels</h3>
+
+              <div class="mb-3 pb-3 border-bottom">
+                <div class="fw-bold text-navy"><i class="fas fa-phone-alt text-primary me-2"></i>National Inspector Toll-Free Helpdesk</div>
+                <div class="fs-6 fw-bold text-primary">1800-11-4000</div>
+                <div class="small text-muted">Operating Hours: Monday – Saturday, 09:30 – 18:00 IST</div>
+              </div>
+
+              <div class="mb-3 pb-3 border-bottom">
+                <div class="fw-bold text-navy"><i class="fas fa-envelope text-primary me-2"></i>Technical Support Email</div>
+                <div class="text-secondary font-monospace">support-slmics@gov.in</div>
+                <div class="small text-muted">For portal login issues, OCR bug reports, and hardware integration.</div>
+              </div>
+
+              <div>
+                <div class="fw-bold text-navy"><i class="fas fa-building text-primary me-2"></i>Central Directorate Office</div>
+                <div class="small text-secondary">Directorate of Legal Metrology, Department of Consumer Affairs, Krishi Bhawan, New Delhi - 110001</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="p-4 bg-white rounded border shadow-sm">
+              <h3 class="fs-5 fw-bold text-navy mb-3"><i class="fas fa-ticket-alt text-primary me-2"></i>Submit Official Helpdesk Ticket</h3>
+              <form id="home-support-form">
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label for="support-officer-id" class="form-label small fw-bold">Officer ID / Employee Code *</label>
+                    <input type="text" class="form-control form-control-sm" id="support-officer-id" placeholder="e.g. LM-8841" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="support-category" class="form-label small fw-bold">Support Category *</label>
+                    <select class="form-select form-select-sm" id="support-category" required>
+                      <option value="Technical Issue" selected>Technical Issue / Bug</option>
+                      <option value="Rule Clarification">Statutory Rule Interpretation</option>
+                      <option value="Hardware Scanner">Camera / Scanner Device Issue</option>
+                      <option value="User Permissions">Role / Permission Request</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="support-subject" class="form-label small fw-bold">Subject *</label>
+                  <input type="text" class="form-control form-control-sm" id="support-subject" placeholder="Brief summary of request" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="support-message" class="form-label small fw-bold">Detailed Description *</label>
+                  <textarea class="form-control form-control-sm" id="support-message" rows="3" placeholder="Provide complete details including Inspection ID if applicable" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-sm px-4 fw-bold">
+                  <i class="fas fa-paper-plane me-1"></i> Submit Official Ticket
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 19. OFFICIAL MULTI-COLUMN FOOTER                                          -->
+  <!-- ========================================================================= -->
+  <footer class="gov-portal-footer">
+    <div class="container-fluid px-lg-4">
+      <div class="row g-4 mb-4">
+        <!-- Col 1: Platform Overview -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="assets/images/govt-seal.svg" alt="Seal" width="48" height="48">
+            <div>
+              <div class="fw-bold text-white fs-6">SLM-ICS Platform</div>
+              <div class="text-warning small" style="font-size: 0.72rem;">LEGAL METROLOGY DIVISION</div>
+            </div>
+          </div>
+          <p class="small text-light" style="line-height: 1.5;">
+            Official digital infrastructure platform for automated packaged commodity inspection, label verification, and statutory compliance monitoring.
+          </p>
+          <div class="small text-light">
+            <i class="fas fa-shield-alt text-warning me-1"></i> Public Sector Digital Service
+          </div>
+        </div>
+
+        <!-- Col 2: Inspection Services -->
+        <div class="col-6 col-md-6 col-lg-2">
+          <h3 class="footer-heading">Services</h3>
+          <ul class="footer-link-list">
+            <li><a href="index.html#scanner">Label Scanner</a></li>
+            <li><a href="index.html#new-inspection">New Inspection</a></li>
+            <li><a href="index.html#ocr">OCR Extraction</a></li>
+            <li><a href="index.html#compliance">Rule Analysis</a></li>
+            <li><a href="index.html#violations">Violations Matrix</a></li>
+            <li><a href="index.html#history">Inspection Archive</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Legal & Regulatory -->
+        <div class="col-6 col-md-6 col-lg-2">
+          <h3 class="footer-heading">Framework</h3>
+          <ul class="footer-link-list">
+            <li><a href="index.html#rules">LMPC Rules 2011</a></li>
+            <li><a href="index.html#rules">Legal Metrology Act 2009</a></li>
+            <li><a href="index.html#rules">Schedule II Units</a></li>
+            <li><a href="index.html#rules">Table-I Font Standards</a></li>
+            <li><a href="#notices">Official Circulars</a></li>
+            <li><a href="index.html#status">System Status</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Resources & Help -->
+        <div class="col-6 col-md-6 col-lg-2">
+          <h3 class="footer-heading">Resources</h3>
+          <ul class="footer-link-list">
+            <li><a href="#user-guide">Inspector SOP Guide</a></li>
+            <li><a href="#about">About Platform</a></li>
+            <li><a href="#process">Workflow Process</a></li>
+            <li><a href="#contact">Helpdesk Contacts</a></li>
+            <li><a href="#security">Security Protocol</a></li>
+            <li><a href="login.html">Officer Portal Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Security & Verification -->
+        <div class="col-6 col-md-6 col-lg-3">
+          <h3 class="footer-heading">Governance</h3>
+          <p class="small text-light mb-2">
+            Restricted to authorized enforcement officers, state controllers, and laboratory inspectors.
+          </p>
+          <div class="p-2 bg-navy rounded border border-secondary small text-light font-monospace mb-2" style="font-size: 0.72rem;">
+            BUILD: v2.6.4-PROD<br>
+            SEC-HASH: 98a4..c21e<br>
+            STATUS: CERTIFIED
+          </div>
+          <a href="login.html" class="btn btn-warning btn-sm fw-bold w-100">
+            <i class="fas fa-lock me-1"></i> Authorized Officer Login
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub Footer -->
+    <div class="gov-sub-footer">
+      <div class="container-fluid px-lg-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+          <div>
+            &copy; 2026 Smart Legal Metrology Inspection &amp; Compliance System (SLM-ICS). For Authorized Public-Sector Use Only.
+          </div>
+          <div class="d-flex gap-3">
+            <a href="#hero" class="text-secondary text-decoration-none small">Privacy Policy</a>
+            <span class="text-secondary">&bull;</span>
+            <a href="#hero" class="text-secondary text-decoration-none small">Terms of Service</a>
+            <span class="text-secondary">&bull;</span>
+            <a href="#hero" class="text-secondary text-decoration-none small">Accessibility Statement</a>
+            <span class="text-secondary">&bull;</span>
+            <a href="#hero" class="text-secondary text-decoration-none small">GIGW Compliance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

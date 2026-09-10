@@ -5,31 +5,56 @@
       <stop offset="50%" stop-color="#f59e0b"/>
       <stop offset="100%" stop-color="#b45309"/>
     </linearGradient>
+    <linearGradient id="sealNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1f36"/>
+      <stop offset="100%" stop-color="#091e3a"/>
+    </linearGradient>
   </defs>
-  <!-- Outer Gold Ring -->
-  <circle cx="100" cy="100" r="94" fill="none" stroke="url(#sealGold)" stroke-width="4"/>
-  <circle cx="100" cy="100" r="86" fill="#0f2942" stroke="url(#sealGold)" stroke-width="2"/>
+  <!-- Outer Gold Rings -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#sealGold)" stroke-width="4"/>
+  <circle cx="100" cy="100" r="88" fill="url(#sealNavy)" stroke="url(#sealGold)" stroke-width="2"/>
   
-  <!-- Star accents -->
-  <polygon points="100,22 103,30 111,30 105,35 107,43 100,38 93,43 95,35 89,30 97,30" fill="#f59e0b"/>
-  <polygon points="100,178 103,170 111,170 105,165 107,157 100,162 93,157 95,165 89,170 97,170" fill="#f59e0b"/>
+  <!-- Subtle Guilloche / Beaded Ring -->
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#fde68a" stroke-width="1" stroke-dasharray="2,3"/>
+
+  <!-- Star Accents -->
+  <polygon points="100,21 102.5,27.5 109.5,27.5 104,31.5 106,38 100,34 94,38 96,31.5 90.5,27.5 97.5,27.5" fill="#f59e0b"/>
+  <polygon points="100,179 102.5,172.5 109.5,172.5 104,168.5 106,162 100,166 94,162 96,168.5 90.5,172.5 97.5,172.5" fill="#f59e0b"/>
 
   <!-- Inner Crest Outline -->
-  <circle cx="100" cy="100" r="62" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,3"/>
-  <path d="M100 45 L118 78 L154 78 L125 100 L136 134 L100 112 L64 134 L75 100 L46 78 L82 78 Z" fill="#f59e0b" opacity="0.2"/>
+  <circle cx="100" cy="100" r="58" fill="#152e4d" stroke="#f59e0b" stroke-width="1.5"/>
 
-  <!-- Central Shield -->
-  <path d="M75 68 Q100 60 125 68 L125 108 Q100 140 75 108 Z" fill="#1e3a8a" stroke="#f59e0b" stroke-width="2"/>
-  <path d="M88 95 L96 103 L114 85" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Balance Beam & Weights Iconography (Legal Metrology Emblem) -->
+  <!-- Central Pillar -->
+  <rect x="98" y="65" width="4" height="60" rx="2" fill="#fde68a"/>
+  <!-- Base -->
+  <path d="M85 125 L115 125 L110 132 L90 132 Z" fill="#f59e0b"/>
+  <!-- Top Fulcrum Beam -->
+  <rect x="68" y="68" width="64" height="4" rx="2" fill="#f59e0b"/>
+  <circle cx="100" cy="70" r="4" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+  
+  <!-- Left Pan -->
+  <line x1="72" y1="72" x2="64" y2="92" stroke="#fde68a" stroke-width="1.5"/>
+  <line x1="72" y1="72" x2="80" y2="92" stroke="#fde68a" stroke-width="1.5"/>
+  <path d="M60 92 Q72 102 84 92 Z" fill="#f59e0b" stroke="#fde68a" stroke-width="1"/>
+
+  <!-- Right Pan -->
+  <line x1="128" y1="72" x2="120" y2="92" stroke="#fde68a" stroke-width="1.5"/>
+  <line x1="128" y1="72" x2="136" y2="92" stroke="#fde68a" stroke-width="1.5"/>
+  <path d="M116 92 Q128 102 140 92 Z" fill="#f59e0b" stroke="#fde68a" stroke-width="1"/>
+
+  <!-- Verification Checkmark Badge -->
+  <circle cx="100" cy="106" r="11" fill="#059669" stroke="#ffffff" stroke-width="1.5"/>
+  <path d="M96 106 L99 109 L105 103" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- Curved Text Top & Bottom -->
-  <path id="curveTop" d="M 30,100 A 70,70 0 0,1 170,100" fill="none"/>
-  <path id="curveBottom" d="M 170,100 A 70,70 0 0,1 30,100" fill="none"/>
+  <path id="curveTop" d="M 28,100 A 72,72 0 0,1 172,100" fill="none"/>
+  <path id="curveBottom" d="M 172,100 A 72,72 0 0,1 28,100" fill="none"/>
 
-  <text font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="9" font-weight="900" fill="#fef3c7" letter-spacing="2">
-    <textPath href="#curveTop" startOffset="50%" text-anchor="middle">LEGAL METROLOGY &bull; LMPC</textPath>
+  <text font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="8" font-weight="800" fill="#fef3c7" letter-spacing="1.8">
+    <textPath href="#curveTop" startOffset="50%" text-anchor="middle">LEGAL METROLOGY &bull; DIGITAL PLATFORM</textPath>
   </text>
-  <text font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="8.5" font-weight="800" fill="#fef3c7" letter-spacing="1.5">
-    <textPath href="#curveBottom" startOffset="50%" text-anchor="middle">GOVERNMENT OF INDIA</textPath>
+  <text font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="7.5" font-weight="700" fill="#fde68a" letter-spacing="1.2">
+    <textPath href="#curveBottom" startOffset="50%" text-anchor="middle">INSPECTION &amp; COMPLIANCE SYSTEM</textPath>
   </text>
 </svg>
