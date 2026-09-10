@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Smart Legal Metrology Inspection & Compliance System - Government-grade platform for statutory verification of packaged commodities under Legal Metrology Rules, 2011." />
+  <title>Smart Legal Metrology Inspection & Compliance System | Government Portal</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Core Design System & Module Stylesheets -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/print.css" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. AUTHENTICATION SCREENS (LOGIN / REGISTRATION)
+       ========================================================================= -->
+  <div id="auth-view-container" style="display:none; min-height:100vh; background:linear-gradient(135deg, #091e3a 0%, #17375e 100%);">
+    <!-- View: Login -->
+    <div id="view-login" class="app-page-view container py-5" style="display:none;">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-5">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+            <div class="card-header text-center py-4 bg-white border-bottom">
+              <div class="sidebar-brand-logo mx-auto mb-2" style="width:48px; height:48px; font-size:1.5rem;">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4 class="fw-bold text-dark mb-1">Legal Metrology Portal</h4>
+              <p class="text-muted small mb-0">Government Packaged Commodities Inspection System</p>
+            </div>
+            <div class="card-body p-4 p-md-5">
+              <form id="auth-login-form">
+                <div class="form-group mb-3">
+                  <label class="form-label-gov" for="login-email">Official Email / Inspector ID <span class="required-star">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-person-badge"></i></span>
+                    <input type="email" id="login-email" class="form-control form-control-gov border-start-0" value="inspector@metrology.gov.in" placeholder="name@metrology.gov.in" required />
+                  </div>
+                </div>
+
+                <div class="form-group mb-3">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <label class="form-label-gov mb-0" for="login-password">Password <span class="required-star">*</span></label>
+                    <a href="javascript:void(0)" class="small text-decoration-none" onclick="UI.showToast('info', 'Password Reset', 'Contact your Directorate System Administrator or use demo credentials.')">Forgot?</a>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock-fill"></i></span>
+                    <input type="password" id="login-password" class="form-control form-control-gov border-start-0 border-end-0" value="inspector123" placeholder="••••••••" required />
+                    <button class="btn btn-outline-secondary btn-toggle-password" type="button" data-target="login-password">
+                      <i class="bi bi-eye-fill"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="login-remember" checked />
+                    <label class="form-check-label small" for="login-remember">Keep session authorized</label>
+                  </div>
+                  <span class="badge bg-primary-subtle text-primary border" style="font-size:0.75rem;">LMPC 2011 Engine</span>
+                </div>
+
+                <button type="submit" class="btn btn-gov btn-gov-primary w-100 py-2 fw-bold">
+                  <i class="bi bi-box-arrow-in-right"></i> Authorize &amp; Sign In
+                </button>
+              </form>
+
+              <div class="mt-4 pt-3 border-top text-center small text-muted">
+                Need official credentials? <a href="#register" class="fw-bold">Register Authorized Officer</a>
+              </div>
+
+              <!-- Quick Demo Access Credentials -->
+              <div class="mt-3 p-2 bg-light border rounded text-center small">
+                <div class="fw-bold text-secondary mb-1">Demo Quick Logins:</div>
+                <div class="d-flex justify-content-center gap-2">
+                  <button class="btn btn-sm btn-outline-primary py-0" style="font-size:0.75rem;" onclick="document.getElementById('login-email').value='inspector@metrology.gov.in'; document.getElementById('login-password').value='inspector123';">Inspector</button>
+                  <button class="btn btn-sm btn-outline-success py-0" style="font-size:0.75rem;" onclick="document.getElementById('login-email').value='senior.inspector@metrology.gov.in'; document.getElementById('login-password').value='senior123';">Senior Officer</button>
+                  <button class="btn btn-sm btn-outline-danger py-0" style="font-size:0.75rem;" onclick="document.getElementById('login-email').value='admin@metrology.gov.in'; document.getElementById('login-password').value='admin123';">Admin</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View: Register -->
+    <div id="view-register" class="app-page-view container py-5" style="display:none;">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-7">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+            <div class="card-header text-center py-4 bg-white border-bottom">
+              <div class="sidebar-brand-logo mx-auto mb-2" style="width:48px; height:48px; font-size:1.5rem;">
+                <i class="bi bi-person-plus-fill"></i>
+              </div>
+              <h4 class="fw-bold text-dark mb-1">Officer Authorization &amp; Registration</h4>
+              <p class="text-muted small mb-0">Legal Metrology (Packaged Commodities) Directorate</p>
+            </div>
+            <div class="card-body p-4 p-md-5">
+              <form id="auth-register-form">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label-gov" for="register-name">Full Officer Name <span class="required-star">*</span></label>
+                    <input type="text" id="register-name" class="form-control form-control-gov" placeholder="e.g. Rajesh Sharma" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label-gov" for="register-empid">Employee / Inspector ID <span class="required-star">*</span></label>
+                    <input type="text" id="register-empid" class="form-control form-control-gov" placeholder="e.g. EMP-9988" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label-gov" for="register-email">Official Government Email <span class="required-star">*</span></label>
+                    <input type="email" id="register-email" class="form-control form-control-gov" placeholder="officer@metrology.gov.in" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label-gov" for="register-phone">Mobile / Contact Number</label>
+                    <input type="tel" id="register-phone" class="form-control form-control-gov" placeholder="+91 98765 43210" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label-gov" for="register-department">Enforcement Directorate / Zone</label>
+                    <select id="register-department" class="form-select form-control-gov">
+                      <option value="Enforcement Zone 1 (West)">Enforcement Zone 1 (West)</option>
+                      <option value="Enforcement Zone 2 (North)">Enforcement Zone 2 (North)</option>
+                      <option value="Enforcement Zone 3 (South)">Enforcement Zone 3 (South)</option>
+                      <option value="Enforcement Zone 4 (East)">Enforcement Zone 4 (East)</option>
+                      <option value="Standards & Compliance Directorate">Standards & Compliance Directorate</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label-gov" for="register-role">Designated Role</label>
+                    <select id="register-role" class="form-select form-control-gov">
+                      <option value="Inspector">Inspector (Grade II)</option>
+                      <option value="Senior Inspector">Senior Inspector / Enforcement Officer</option>
+                      <option value="Admin">Directorate Administrator</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label-gov" for="register-password">Password <span class="required-star">*</span></label>
+                    <input type="password" id="register-password" class="form-control form-control-gov" placeholder="••••••••" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label-gov" for="register-confirm-password">Confirm Password <span class="required-star">*</span></label>
+                    <input type="password" id="register-confirm-password" class="form-control form-control-gov" placeholder="••••••••" required />
+                  </div>
+                </div>
+
+                <div class="form-check mt-4 mb-4">
+                  <input class="form-check-input" type="checkbox" id="register-terms" checked required />
+                  <label class="form-check-label small text-secondary" for="register-terms">
+                    I solemnly declare that all statutory inspections conducted by me will adhere to the provisions of the Legal Metrology Act, 2009 and Packaged Commodities Rules, 2011.
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-gov btn-gov-primary w-100 py-2 fw-bold">
+                  <i class="bi bi-shield-lock-fill"></i> Register &amp; Request Authorization
+                </button>
+              </form>
+
+              <div class="mt-4 pt-3 border-top text-center small text-muted">
+                Already an authorized officer? <a href="#login" class="fw-bold">Sign In here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. MAIN APPLICATION SHELL
+       ========================================================================= -->
+  <div id="app-shell-container" style="display:flex;">
+    <!-- Offcanvas Mobile Backdrop -->
+    <div class="sidebar-backdrop"></div>
+
+    <!-- Responsive Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand-logo">
+          <i class="bi bi-shield-check"></i>
+        </div>
+        <div class="sidebar-brand-text">
+          <span class="sidebar-brand-title">SLM-ICS PORTAL</span>
+          <span class="sidebar-brand-subtitle">Legal Metrology (LMPC)</span>
+        </div>
+      </div>
+
+      <div class="sidebar-nav-container">
+        <div class="sidebar-section-title">Inspection Workflow</div>
+        <ul class="sidebar-nav-list">
+          <li class="sidebar-nav-item">
+            <a href="#dashboard" class="nav-link">
+              <i class="bi bi-grid-1x2-fill"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#new-inspection" class="nav-link">
+              <i class="bi bi-plus-circle-fill"></i>
+              <span>New Inspection</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#scanner" class="nav-link">
+              <i class="bi bi-camera-fill"></i>
+              <span>Product Scanner</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#history" class="nav-link">
+              <i class="bi bi-journal-text"></i>
+              <span>Inspections Registry</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#violations" class="nav-link">
+              <i class="bi bi-exclamation-octagon-fill"></i>
+              <span>Violations &amp; Evidence</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#reports" class="nav-link">
+              <i class="bi bi-file-earmark-pdf-fill"></i>
+              <span>Reports &amp; Certificates</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-section-title">Intelligence &amp; Data</div>
+        <ul class="sidebar-nav-list">
+          <li class="sidebar-nav-item">
+            <a href="#analytics" class="nav-link">
+              <i class="bi bi-bar-chart-fill"></i>
+              <span>Analytics &amp; Trends</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#notifications" class="nav-link">
+              <i class="bi bi-bell-fill"></i>
+              <span>Notifications</span>
+              <span class="sidebar-nav-badge notification-unread-count" style="display:none;">0</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-section-title admin-only">Administration</div>
+        <ul class="sidebar-nav-list admin-only">
+          <li class="sidebar-nav-item">
+            <a href="#rules" class="nav-link">
+              <i class="bi bi-book-fill"></i>
+              <span>LMPC Rules Catalog</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#users" class="nav-link">
+              <i class="bi bi-people-fill"></i>
+              <span>Officer Directory</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-section-title">System &amp; Preferences</div>
+        <ul class="sidebar-nav-list">
+          <li class="sidebar-nav-item">
+            <a href="#settings" class="nav-link">
+              <i class="bi bi-gear-fill"></i>
+              <span>Settings &amp; API Config</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#system-status" class="nav-link">
+              <i class="bi bi-activity"></i>
+              <span>System Health</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="javascript:void(0)" class="nav-link btn-action-logout text-danger">
+              <i class="bi bi-box-arrow-right text-danger"></i>
+              <span>Sign Out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="sidebar-user-avatar user-avatar-text">RS</div>
+          <div class="sidebar-user-info">
+            <div class="sidebar-user-name user-display-name">Rajesh Sharma</div>
+            <div class="sidebar-user-role">
+              <i class="bi bi-patch-check-fill text-success" style="font-size:0.75rem;"></i>
+              <span class="user-display-role">Inspector</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="app-main-content">
+      <!-- Top Government Bar -->
+      <div class="gov-portal-banner no-print">
+        <div class="gov-portal-badge">
+          <i class="bi bi-building"></i>
+          <span>GOVERNMENT OF INDIA &bull; Department of Consumer Affairs &bull; Legal Metrology Division</span>
+        </div>
+        <div class="d-none d-md-flex align-items-center gap-3" style="font-size:0.72rem;">
+          <span><i class="bi bi-shield-lock-fill"></i> Tamper-Evident Digital Audit</span>
+          <span><i class="bi bi-calendar-event"></i> LMPC Rules 2011 (As Amended)</span>
+        </div>
+      </div>
+
+      <!-- Top Navigation Header -->
+      <header class="app-topbar no-print">
+        <div class="topbar-left">
+          <button class="topbar-toggle-btn d-none d-lg-flex" id="sidebar-toggle-btn" title="Toggle Sidebar">
+            <i class="bi bi-list"></i>
+          </button>
+          <button class="topbar-toggle-btn d-lg-none" id="sidebar-mobile-toggle-btn" title="Open Mobile Navigation">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <div class="topbar-breadcrumb-container">
+            <h1 class="topbar-page-title" id="topbar-page-heading">Inspection Dashboard</h1>
+            <div class="topbar-breadcrumbs" id="topbar-breadcrumb-list">
+              <a href="#dashboard">Portal</a> <i class="bi bi-chevron-right" style="font-size:0.65rem;"></i> <span>Dashboard</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <span class="topbar-badge-pill">
+            <i class="bi bi-check-circle-fill text-success"></i>
+            <span class="user-role-badge">Inspector</span>
+          </span>
+
+          <button class="btn btn-gov btn-gov-sm btn-gov-outline-primary d-none d-md-inline-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#batch-inspection-modal" title="Batch Multi-Product Queue">
+            <i class="bi bi-layers-fill"></i> Batch Queue
+          </button>
+
+          <button class="topbar-icon-btn text-primary" id="btn-toggle-copilot" title="AI Statutory Copilot Assistant">
+            <i class="bi bi-robot"></i>
+          </button>
+
+          <button class="topbar-icon-btn" id="btn-theme-toggle" title="Toggle Dark/Light Mode">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <a href="#notifications" class="topbar-icon-btn" title="View Notifications">
+            <i class="bi bi-bell-fill"></i>
+            <span class="badge-dot notification-badge-dot" style="display:none;"></span>
+          </a>
+
+          <div class="dropdown">
+            <button class="topbar-icon-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="width:auto; padding:0 0.5rem; gap:0.4rem;">
+              <div class="sidebar-user-avatar user-avatar-text" style="width:28px; height:28px; font-size:0.75rem;">RS</div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><h6 class="dropdown-header user-display-name">Rajesh Sharma</h6></li>
+              <li><a class="dropdown-item" href="#settings"><i class="bi bi-person-gear"></i> Profile &amp; Preferences</a></li>
+              <li><a class="dropdown-item" href="#system-status"><i class="bi bi-activity"></i> Service Health</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger btn-action-logout" href="javascript:void(0)"><i class="bi bi-box-arrow-right"></i> Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- Step-by-Step Inspection Workflow Progress Bar -->
+      <div class="px-3 pt-3 no-print" id="inspection-stepper-container" style="display:none;">
+        <div class="inspection-stepper">
+          <div class="stepper-step" data-step="1" onclick="window.location.hash='#new-inspection'">
+            <div class="stepper-icon"><i class="bi bi-file-earmark-text"></i></div>
+            <span class="stepper-label">1. Metadata</span>
+          </div>
+          <div class="stepper-connector"></div>
+          <div class="stepper-step" data-step="2" onclick="window.location.hash='#scanner'">
+            <div class="stepper-icon"><i class="bi bi-camera"></i></div>
+            <span class="stepper-label">2. Scanner</span>
+          </div>
+          <div class="stepper-connector"></div>
+          <div class="stepper-step" data-step="3" onclick="window.location.hash='#image-processing'">
+            <div class="stepper-icon"><i class="bi bi-sliders"></i></div>
+            <span class="stepper-label">3. Process</span>
+          </div>
+          <div class="stepper-connector"></div>
+          <div class="stepper-step" data-step="4" onclick="window.location.hash='#ocr'">
+            <div class="stepper-icon"><i class="bi bi-fonts"></i></div>
+            <span class="stepper-label">4. OCR Text</span>
+          </div>
+          <div class="stepper-connector"></div>
+          <div class="stepper-step" data-step="5" onclick="window.location.hash='#ai-analysis'">
+            <div class="stepper-icon"><i class="bi bi-cpu"></i></div>
+            <span class="stepper-label">5. AI Fields</span>
+          </div>
+          <div class="stepper-connector"></div>
+          <div class="stepper-step" data-step="6" onclick="window.location.hash='#compliance'">
+            <div class="stepper-icon"><i class="bi bi-check2-all"></i></div>
+            <span class="stepper-label">6. Compliance</span>
+          </div>
+          <div class="stepper-connector"></div>
+          <div class="stepper-step" data-step="7" onclick="window.location.hash='#violations'">
+            <div class="stepper-icon"><i class="bi bi-exclamation-triangle"></i></div>
+            <span class="stepper-label">7. Violations</span>
+          </div>
+          <div class="stepper-connector"></div>
+          <div class="stepper-step" data-step="8" onclick="window.location.hash='#human-verification'">
+            <div class="stepper-icon"><i class="bi bi-person-check"></i></div>
+            <span class="stepper-label">8. Verification</span>
+          </div>
+          <div class="stepper-connector"></div>
+          <div class="stepper-step" data-step="9" onclick="window.location.hash='#summary'">
+            <div class="stepper-icon"><i class="bi bi-journal-check"></i></div>
+            <span class="stepper-label">9. Summary</span>
+          </div>
+          <div class="stepper-connector"></div>
+          <div class="stepper-step" data-step="10" onclick="window.location.hash='#reports'">
+            <div class="stepper-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+            <span class="stepper-label">10. Report</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           PAGE VIEW CONTAINERS
+           ===================================================================== -->
+      <div class="page-container">
+
+        <!-- VIEW 1: DASHBOARD -->
+        <section id="view-dashboard" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Enforcement Overview &amp; Compliance Hub</h2>
+              <p class="text-muted mb-0">Live monitoring of packaged commodities inspections under LMPC Rules 2011.</p>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-gov btn-gov-outline-primary" data-bs-toggle="modal" data-bs-target="#batch-inspection-modal">
+                <i class="bi bi-layers-fill"></i> Batch Inspection
+              </button>
+              <button class="btn btn-gov btn-gov-primary" id="btn-dashboard-start-inspection">
+                <i class="bi bi-plus-circle-fill"></i> Start New Inspection
+              </button>
+            </div>
+          </div>
+
+          <!-- KPI Cards Row -->
+          <div class="row g-3 mb-4">
+            <div class="col-12 col-sm-6 col-xl-3">
+              <div class="kpi-card info">
+                <div class="kpi-header">
+                  <span class="kpi-title">Total Inspections</span>
+                  <div class="kpi-icon-wrapper"><i class="bi bi-clipboard2-check-fill"></i></div>
+                </div>
+                <div class="kpi-value" id="dash-kpi-total">0</div>
+                <div class="kpi-footer">
+                  <span class="kpi-trend-badge up"><i class="bi bi-arrow-up-short"></i> +14%</span> vs last month
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+              <div class="kpi-card compliant">
+                <div class="kpi-header">
+                  <span class="kpi-title">Compliant Products</span>
+                  <div class="kpi-icon-wrapper"><i class="bi bi-check-circle-fill"></i></div>
+                </div>
+                <div class="kpi-value text-success" id="dash-kpi-compliant">0</div>
+                <div class="kpi-footer">
+                  <span class="fw-bold" id="dash-kpi-rate">0%</span> Overall Compliance Rate
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+              <div class="kpi-card non-compliant">
+                <div class="kpi-header">
+                  <span class="kpi-title">Statutory Violations</span>
+                  <div class="kpi-icon-wrapper"><i class="bi bi-exclamation-octagon-fill"></i></div>
+                </div>
+                <div class="kpi-value text-danger" id="dash-kpi-non-compliant">0</div>
+                <div class="kpi-footer">
+                  <span class="text-danger fw-semibold">Action Notices Dispatched</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+              <div class="kpi-card review">
+                <div class="kpi-header">
+                  <span class="kpi-title">Pending Human Review</span>
+                  <div class="kpi-icon-wrapper"><i class="bi bi-person-exclamation"></i></div>
+                </div>
+                <div class="kpi-value text-warning" id="dash-kpi-review">0</div>
+                <div class="kpi-footer">
+                  <span>Low OCR confidence queues</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts Row -->
+          <div class="row g-4 mb-4">
+            <div class="col-12 col-lg-8">
+              <div class="gov-card h-100">
+                <div class="gov-card-header">
+                  <div class="gov-card-title"><i class="bi bi-graph-up text-primary"></i> Inspection Volume &amp; Compliance Trends</div>
+                  <span class="badge bg-light text-dark border">Last 7 Days</span>
+                </div>
+                <div class="gov-card-body" style="height:300px;">
+                  <canvas id="dash-chart-trends"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div class="gov-card h-100">
+                <div class="gov-card-header">
+                  <div class="gov-card-title"><i class="bi bi-lightning-charge-fill text-warning"></i> Action Queue</div>
+                  <a href="#violations" class="small fw-semibold">View All</a>
+                </div>
+                <div class="gov-card-body">
+                  <div id="dash-pending-reviews-list">
+                    <!-- Dynamic pending reviews -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Inspections Table -->
+          <div class="gov-card">
+            <div class="gov-card-header">
+              <div class="gov-card-title"><i class="bi bi-clock-history text-primary"></i> Recent Commodity Inspections</div>
+              <a href="#history" class="btn btn-gov btn-gov-sm btn-gov-outline-primary">Full Registry</a>
+            </div>
+            <div class="table-responsive-gov">
+              <table class="table-gov">
+                <thead>
+                  <tr>
+                    <th>Inspection ID</th>
+                    <th>Product / Brand</th>
+                    <th>Status</th>
+                    <th>Confidence</th>
+                    <th class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="dash-recent-inspections-tbody">
+                  <!-- Dynamic rows -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 2: NEW INSPECTION -->
+        <section id="view-new-inspection" class="app-page-view" style="display:none;">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+              <div class="gov-card">
+                <div class="gov-card-header">
+                  <div>
+                    <div class="gov-card-title"><i class="bi bi-file-earmark-plus-fill text-primary"></i> New Packaged Commodity Inspection</div>
+                    <div class="gov-card-subtitle">Initialize metadata for physical or market package examination.</div>
+                  </div>
+                  <!-- Quick Preset Selector for instant testing -->
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="small fw-semibold text-muted">Test Preset:</span>
+                    <select id="new-insp-preset-select" class="form-select form-select-sm" style="width:200px;">
+                      <option value="">-- Choose Sample --</option>
+                      <option value="SAMPLE-01">NutriCrunch Cookies (Non-Compliant)</option>
+                      <option value="SAMPLE-02">GlowCare Face Wash (Review Req)</option>
+                      <option value="SAMPLE-03">PureDrop Sunflower Oil (Compliant)</option>
+                      <option value="SAMPLE-04">SoundMax Earbuds (Non-Compliant)</option>
+                      <option value="SAMPLE-05">Royal Basmati Rice (Compliant)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="gov-card-body">
+                  <form id="form-new-inspection">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label class="form-label-gov" for="new-insp-id">Inspection Reference ID <span class="required-star">*</span></label>
+                        <input type="text" id="new-insp-id" class="form-control form-control-gov font-monospace" readonly />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label-gov" for="new-insp-date">Date &amp; Time <span class="required-star">*</span></label>
+                        <input type="datetime-local" id="new-insp-date" class="form-control form-control-gov" required />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label-gov" for="new-insp-inspector">Assigned Inspector Officer <span class="required-star">*</span></label>
+                        <input type="text" id="new-insp-inspector" class="form-control form-control-gov" readonly />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label-gov" for="new-insp-location">Inspection Location / Retailer / Ward <span class="required-star">*</span></label>
+                        <input type="text" id="new-insp-location" class="form-control form-control-gov" placeholder="e.g. Reliance Smart Bazar, Sector 18" required />
+                      </div>
+                      <div class="col-md-8">
+                        <label class="form-label-gov" for="new-insp-product-name">Product Name &amp; Description <span class="required-star">*</span></label>
+                        <input type="text" id="new-insp-product-name" class="form-control form-control-gov" placeholder="e.g. NutriCrunch Almond Cookies (200g)" required />
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-label-gov" for="new-insp-category">Commodity Category <span class="required-star">*</span></label>
+                        <select id="new-insp-category" class="form-select form-control-gov">
+                          <option value="Packaged Food & Confectionery">Packaged Food & Confectionery</option>
+                          <option value="Edible Oils & Commodities">Edible Oils & Commodities</option>
+                          <option value="Cosmetics & Personal Care">Cosmetics & Personal Care</option>
+                          <option value="Electronics & Hardware">Electronics & Hardware</option>
+                          <option value="Household & Cleaning">Household & Cleaning</option>
+                          <option value="Pharmaceuticals & Health">Pharmaceuticals & Health</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label-gov" for="new-insp-brand">Brand / Manufacturer Identity</label>
+                        <input type="text" id="new-insp-brand" class="form-control form-control-gov" placeholder="e.g. NutriCrunch Foods Pvt Ltd" />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label-gov" for="new-insp-barcode">Barcode / EAN-13 (Optional)</label>
+                        <input type="text" id="new-insp-barcode" class="form-control form-control-gov font-monospace" placeholder="8901234567890" />
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label-gov" for="new-insp-notes">Officer Pre-Inspection Observations</label>
+                        <textarea id="new-insp-notes" class="form-control form-control-gov" rows="2" placeholder="Enter any initial visual defects, physical damage, or batch details..."></textarea>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-3 mt-4 pt-3 border-top">
+                      <a href="#history" class="btn btn-gov btn-gov-secondary">Cancel</a>
+                      <button type="submit" class="btn btn-gov btn-gov-primary" id="btn-start-inspection-submit">
+                        <i class="bi bi-camera-fill"></i> Start Inspection &amp; Capture Label
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 3: PRODUCT SCANNER & CAMERA -->
+        <section id="view-scanner" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Commodity Label Optical Scanner</h2>
+              <p class="text-muted mb-0">Capture Principal Display Panel (PDP) and mandatory declarations.</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="small fw-semibold text-muted">Preset Label:</span>
+              <select id="scanner-sample-select" class="form-select form-select-sm" style="width:220px;">
+                <option value="SAMPLE-01">1. NutriCrunch Cookies</option>
+                <option value="SAMPLE-02">2. GlowCare Face Wash</option>
+                <option value="SAMPLE-03">3. PureDrop Sunflower Oil</option>
+                <option value="SAMPLE-04">4. SoundMax Earbuds Pro</option>
+                <option value="SAMPLE-05">5. Royal Basmati Rice</option>
+              </select>
+              <button class="btn btn-gov btn-gov-sm btn-gov-outline-primary" data-bs-toggle="modal" data-bs-target="#batch-inspection-modal">
+                <i class="bi bi-layers-fill"></i> Batch
+              </button>
+            </div>
+          </div>
+
+          <!-- Label Sides Selection Tabs -->
+          <div class="label-sides-pills">
+            <button class="label-side-pill active" data-side="Front Label"><i class="bi bi-square"></i> Front Panel</button>
+            <button class="label-side-pill" data-side="Back Declarations"><i class="bi bi-card-text"></i> Back (Declarations)</button>
+            <button class="label-side-pill" data-side="Side Panel (MRP & Dates)"><i class="bi bi-layout-sidebar"></i> Side (MRP / Batch)</button>
+            <button class="label-side-pill" data-side="Nutrition / Weights"><i class="bi bi-speedometer2"></i> Weight / Volume Panel</button>
+          </div>
+
+          <div class="row g-4">
+            <!-- Camera & Canvas Viewport Column -->
+            <div class="col-12 col-lg-8">
+              <div class="gov-card p-3">
+                <div class="scanner-viewport-wrapper">
+                  <!-- Video Stream Element -->
+                  <video id="camera-video" playsinline autoplay muted style="display:none;"></video>
+                  <!-- Canvas Preview Element -->
+                  <img id="scanner-image-preview" src="" alt="Packaging Preview" style="display:none; max-height:420px; object-fit:contain;" />
+
+                  <!-- Reticle Target Overlay -->
+                  <div class="scanner-overlay-grid" style="display:none;">
+                    <div class="scanner-overlay-corners"></div>
+                    <span class="scanner-target-hint"><i class="bi bi-aspect-ratio"></i> Align Label Within Reticle</span>
+                  </div>
+
+                  <!-- Fallback Placeholder when empty -->
+                  <div id="scanner-placeholder-prompt" class="text-center text-muted p-4">
+                    <i class="bi bi-camera" style="font-size:3rem;"></i>
+                    <div class="mt-2 fw-semibold">Camera is idle or label is loaded below</div>
+                  </div>
+                </div>
+
+                <!-- Live Camera Controls Bar -->
+                <div class="scanner-controls-bar">
+                  <!-- Active Camera Controls -->
+                  <div id="camera-active-controls" style="display:none;" class="d-flex align-items-center gap-3">
+                    <button class="btn-gov btn-gov-secondary btn-gov-sm" id="btn-switch-camera" title="Flip Camera">
+                      <i class="bi bi-arrow-repeat"></i> Flip Camera
+                    </button>
+                    <button class="btn-capture-camera" id="btn-capture-snapshot" title="Capture Snapshot">
+                      <div class="capture-inner-circle"></div>
+                    </button>
+                    <button class="btn-gov btn-gov-danger btn-gov-sm" id="btn-stop-camera" title="Stop Camera">
+                      <i class="bi bi-x-circle"></i> Stop Camera
+                    </button>
+                  </div>
+
+                  <!-- Idle Controls -->
+                  <div id="camera-idle-controls" class="d-flex flex-wrap align-items-center gap-2">
+                    <button class="btn btn-gov btn-gov-primary" id="btn-start-camera">
+                      <i class="bi bi-camera-video-fill"></i> Start Live Camera
+                    </button>
+                    <button class="btn btn-gov btn-gov-secondary" onclick="document.getElementById('scanner-file-input').click()">
+                      <i class="bi bi-upload"></i> Upload Image File
+                    </button>
+                    <input type="file" id="scanner-file-input" accept="image/*" multiple style="display:none;" />
+                  </div>
+                </div>
+
+                <!-- Image Manipulation Toolbar -->
+                <div class="d-flex justify-content-between align-items-center pt-2 border-top flex-wrap gap-2">
+                  <div class="d-flex gap-1">
+                    <button class="btn btn-gov btn-gov-sm btn-gov-secondary" id="btn-tool-rotate" title="Rotate 90 deg"><i class="bi bi-arrow-clockwise"></i> Rotate</button>
+                    <button class="btn btn-gov btn-gov-sm btn-gov-secondary" id="btn-tool-zoomin" title="Zoom In"><i class="bi bi-zoom-in"></i></button>
+                    <button class="btn btn-gov btn-gov-sm btn-gov-secondary" id="btn-tool-zoomout" title="Zoom Out"><i class="bi bi-zoom-out"></i></button>
+                    <button class="btn btn-gov btn-gov-sm btn-gov-secondary" id="btn-tool-clear" title="Reset View"><i class="bi bi-arrow-counterclockwise"></i> Reset</button>
+                  </div>
+                  <div id="scanner-quality-score" class="badge bg-success-subtle text-success border">
+                    Quality: <strong>96%</strong> (High)
+                  </div>
+                </div>
+
+                <!-- Quality Warnings Banner -->
+                <div id="scanner-quality-warnings" class="quality-alert-banner" style="display:none;">
+                  <i class="bi bi-exclamation-triangle-fill text-warning" style="font-size:1.2rem;"></i>
+                  <div class="warning-text small">Image resolution is acceptable.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Drag-and-Drop & Thumbnails Column -->
+            <div class="col-12 col-lg-4">
+              <!-- Dropzone Card -->
+              <div class="gov-dropzone mb-3" id="scanner-dropzone">
+                <i class="bi bi-cloud-arrow-up-fill text-primary" style="font-size:2.4rem;"></i>
+                <div class="fw-bold mt-2">Drag &amp; Drop Commodity Photos</div>
+                <div class="text-muted small">Supports JPG, PNG, WEBP up to 12 MB</div>
+              </div>
+
+              <!-- Thumbnails Tray -->
+              <div class="gov-card p-3 mb-3">
+                <div class="fw-bold mb-2 small text-uppercase text-secondary">
+                  <i class="bi bi-images"></i> Package Label Images Tray
+                </div>
+                <div class="image-thumbnail-grid" id="scanner-thumbnail-grid">
+                  <!-- Dynamic thumbnails -->
+                </div>
+              </div>
+
+              <!-- Action Button -->
+              <button class="btn btn-gov btn-gov-success w-100 py-3 fw-bold" id="btn-analyze-product">
+                <i class="bi bi-cpu-fill"></i> Run Preprocessing &amp; OCR Analysis
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 4: IMAGE PREPROCESSING VIEW -->
+        <section id="view-image-processing" class="app-page-view" style="display:none;">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+              <div class="gov-card">
+                <div class="gov-card-header">
+                  <div>
+                    <div class="gov-card-title"><i class="bi bi-sliders text-primary"></i> Image Preprocessing &amp; Normalization Pipeline</div>
+                    <div class="gov-card-subtitle">Automated image enhancement for statutory optical text extraction.</div>
+                  </div>
+                  <span class="badge bg-primary font-monospace">LMPC-ENHANCE-V2</span>
+                </div>
+
+                <div class="gov-card-body">
+                  <!-- Progress Bar -->
+                  <div class="progress mb-4" style="height: 10px;">
+                    <div id="preprocessing-overall-progress" class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 0%;"></div>
+                  </div>
+
+                  <div class="alert alert-info d-flex align-items-center gap-2 mb-4">
+                    <i class="bi bi-info-circle-fill" style="font-size:1.2rem;"></i>
+                    <div id="preprocessing-status-text" class="fw-semibold">Initializing digital signal enhancement filters...</div>
+                  </div>
+
+                  <!-- Stages Grid -->
+                  <div class="preprocessing-grid" id="preprocessing-stages-container">
+                    <!-- Dynamic Stage Cards -->
+                  </div>
+
+                  <div class="d-flex justify-content-end gap-3 mt-4 pt-3 border-top">
+                    <button class="btn btn-gov btn-gov-primary" id="btn-preprocessing-proceed" disabled>
+                      <i class="bi bi-arrow-right-circle"></i> Proceed to OCR Results
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 5: OCR RESULTS DUAL-PANE -->
+        <section id="view-ocr" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Optical Character Recognition (OCR) Split View</h2>
+              <p class="text-muted mb-0">Dual-pane packaging visualizer with extracted bounding boxes and text candidates.</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge bg-light text-dark border">Time: <strong id="ocr-time-badge">420 ms</strong></span>
+              <span class="badge bg-light text-dark border">Language: <strong id="ocr-lang-badge">English (IN)</strong></span>
+              <button class="btn btn-gov btn-gov-primary btn-gov-sm" id="btn-ocr-continue-ai">
+                <i class="bi bi-arrow-right-circle"></i> Continue to AI Analysis
+              </button>
+            </div>
+          </div>
+
+          <div class="ocr-workspace-grid">
+            <!-- Left Pane: Image with Bounding Box Canvas -->
+            <div class="gov-card p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold small text-uppercase text-secondary"><i class="bi bi-bounding-box-circles"></i> Packaging Label &amp; Text Regions</span>
+                <span class="badge bg-primary" style="font-size:0.7rem;">Interactive Canvas</span>
+              </div>
+              <div class="ocr-image-viewer-container">
+                <div class="ocr-canvas-wrapper">
+                  <img id="ocr-image-preview" src="" alt="OCR Target" />
+                  <canvas id="ocr-bbox-canvas"></canvas>
+                </div>
+                <div class="ocr-zoom-toolbar">
+                  <button class="ocr-zoom-btn" onclick="OCR.drawBoundingBoxes()" title="Redraw Boxes"><i class="bi bi-arrows-fullscreen"></i></button>
+                </div>
+              </div>
+              <div class="form-hint-text mt-2 text-center">Highlighted bounding boxes indicate detected statutory text blocks.</div>
+            </div>
+
+            <!-- Right Pane: Extracted Raw OCR Text Editor -->
+            <div class="gov-card p-3 ocr-text-editor-container">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold small text-uppercase text-secondary"><i class="bi bi-file-earmark-code"></i> Extracted OCR Raw Text</span>
+                <div class="d-flex align-items-center gap-2">
+                  <div id="ocr-confidence-badge"></div>
+                  <button class="btn btn-gov btn-gov-secondary btn-gov-sm" id="btn-copy-ocr-text" title="Copy Text"><i class="bi bi-clipboard"></i> Copy</button>
+                </div>
+              </div>
+
+              <!-- Candidate Field Chips -->
+              <div class="mb-2 p-2 bg-light border rounded" id="ocr-candidate-tags-container">
+                <!-- Dynamic candidate pills -->
+              </div>
+
+              <textarea id="ocr-raw-text-input" class="ocr-raw-textarea" placeholder="OCR extracted text will display here..."></textarea>
+
+              <div class="d-flex justify-content-between align-items-center mt-2 pt-2 border-top" style="font-size:0.75rem; color:var(--text-muted);">
+                <div>
+                  <span id="ocr-word-count">0 words</span> &bull; <span id="ocr-char-count">0 chars</span>
+                </div>
+                <div class="text-success"><i class="bi bi-shield-check"></i> Live draft autosaved</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 6: AI EXTRACTED STRUCTURED FIELDS -->
+        <section id="view-ai-analysis" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">AI Extracted Legal Metrology Fields</h2>
+              <p class="text-muted mb-0">Parsed key-value entities conforming to Rule 6 mandatory declarations.</p>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-gov btn-gov-secondary" id="btn-save-ai-edits">
+                <i class="bi bi-save"></i> Save Changes
+              </button>
+              <button class="btn btn-gov btn-gov-primary" id="btn-ai-continue-compliance">
+                <i class="bi bi-shield-check"></i> Evaluate LMPC Compliance
+              </button>
+            </div>
+          </div>
+
+          <!-- Unsaved Edits Alert Banner -->
+          <div id="ai-unsaved-banner" class="alert alert-warning d-flex justify-content-between align-items-center mb-3" style="display:none;">
+            <div><i class="bi bi-exclamation-circle-fill"></i> You have modified declarations that need to be committed.</div>
+            <button class="btn btn-sm btn-gov-warning" onclick="AIAnalysis.saveChanges()">Commit Now</button>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-8">
+              <div class="gov-card p-3" id="ai-fields-container">
+                <!-- Dynamic AI field cards -->
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <!-- Legal Reference Guide Card -->
+              <div class="gov-card p-3 mb-3">
+                <div class="fw-bold mb-2 text-primary small text-uppercase">
+                  <i class="bi bi-book"></i> Statutory Rule 6 Checksheet
+                </div>
+                <ul class="list-unstyled mb-0" style="font-size:0.8rem; line-height:1.8;">
+                  <li><i class="bi bi-check text-success fw-bold"></i> <strong>Rule 6(1)(a):</strong> Mfr / Packer / Importer Name &amp; Postal PIN</li>
+                  <li><i class="bi bi-check text-success fw-bold"></i> <strong>Rule 6(1)(b):</strong> Generic Commodity Name</li>
+                  <li><i class="bi bi-check text-success fw-bold"></i> <strong>Rule 6(1)(c):</strong> Net Quantity (g, kg, ml, l, N)</li>
+                  <li><i class="bi bi-check text-success fw-bold"></i> <strong>Rule 6(1)(d):</strong> Month &amp; Year of Packing</li>
+                  <li><i class="bi bi-check text-success fw-bold"></i> <strong>Rule 6(1)(da):</strong> Unit Sale Price (USP)</li>
+                  <li><i class="bi bi-check text-success fw-bold"></i> <strong>Rule 6(1)(e):</strong> MRP "inclusive of all taxes"</li>
+                  <li><i class="bi bi-check text-success fw-bold"></i> <strong>Rule 6(1)(f):</strong> Consumer Grievance Cell details</li>
+                  <li><i class="bi bi-check text-success fw-bold"></i> <strong>Rule 6(1)(g):</strong> Country of Origin for imports</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 7: COMPLIANCE CHECK -->
+        <section id="view-compliance" class="app-page-view" style="display:none;">
+          <!-- Score Banner -->
+          <div class="compliance-score-banner">
+            <div class="d-flex align-items-center gap-4">
+              <div class="compliance-gauge-circle" id="compliance-score-circle" style="border:5px solid #10b981; border-radius:50%;">
+                <span class="compliance-gauge-text" id="compliance-score-number">85%</span>
+              </div>
+              <div id="compliance-status-verdict">
+                <!-- Dynamic verdict -->
+              </div>
+            </div>
+            <div class="d-flex gap-2 flex-wrap">
+              <button class="btn btn-gov btn-gov-secondary" id="btn-compliance-review-violations">
+                <i class="bi bi-exclamation-triangle"></i> Review Violations
+              </button>
+              <button class="btn btn-gov btn-gov-success" id="btn-compliance-view-summary">
+                <i class="bi bi-journal-check"></i> Proceed to Summary
+              </button>
+            </div>
+          </div>
+
+          <!-- Summary Stat Cards -->
+          <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-white border rounded text-center">
+                <div class="text-success fw-bold h4 mb-0" id="compliance-kpi-passed">0</div>
+                <div class="form-hint-text fw-semibold text-uppercase">Passed Rules</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-white border rounded text-center">
+                <div class="text-danger fw-bold h4 mb-0" id="compliance-kpi-failed">0</div>
+                <div class="form-hint-text fw-semibold text-uppercase">Violations / Failed</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-white border rounded text-center">
+                <div class="text-warning fw-bold h4 mb-0" id="compliance-kpi-review">0</div>
+                <div class="form-hint-text fw-semibold text-uppercase">Review Required</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-white border rounded text-center">
+                <div class="text-info fw-bold h4 mb-0" id="compliance-kpi-warnings">0</div>
+                <div class="form-hint-text fw-semibold text-uppercase">Warnings</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Violations Alert Banner -->
+          <div id="compliance-violations-alert" class="alert alert-danger d-flex align-items-center gap-2 mb-4" style="display:none;">
+            <i class="bi bi-exclamation-octagon-fill" style="font-size:1.5rem;"></i>
+            <div class="violation-alert-text">Statutory Violations identified.</div>
+          </div>
+
+          <!-- Detailed Rule Checks List -->
+          <div class="gov-card">
+            <div class="gov-card-header">
+              <div class="gov-card-title"><i class="bi bi-shield-check text-primary"></i> Statutory Rule Compliance Matrix</div>
+              <select id="compliance-rule-filter" class="form-select form-select-sm" style="width:180px;">
+                <option value="ALL">All Rule Checks</option>
+                <option value="FAILED">Violations Only</option>
+                <option value="REVIEW REQUIRED">Review Required</option>
+                <option value="PASSED">Passed Rules</option>
+              </select>
+            </div>
+            <div class="gov-card-body" id="compliance-rules-list-container">
+              <!-- Dynamic rule accordion items -->
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 8: VIOLATIONS & EVIDENCE -->
+        <section id="view-violations" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Statutory Violations &amp; Visual Evidence</h2>
+              <p class="text-muted mb-0">Photographic proof cards with extracted values vs legal requirements.</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge bg-danger" id="violations-total-count-badge">0 Violations</span>
+              <button class="btn btn-gov btn-gov-primary" id="btn-violations-continue-summary">
+                <i class="bi bi-journal-check"></i> Continue to Summary
+              </button>
+            </div>
+          </div>
+
+          <div id="violations-evidence-container">
+            <!-- Dynamic Violation Evidence Cards -->
+          </div>
+
+          <!-- Empty State when compliant -->
+          <div id="violations-empty-state" class="gov-empty-state" style="display:none;">
+            <div class="empty-state-icon text-success"><i class="bi bi-check-circle-fill"></i></div>
+            <div class="empty-state-title">No Statutory Violations Detected</div>
+            <div class="empty-state-desc">This packaged commodity satisfies all examined provisions under Legal Metrology Rules, 2011.</div>
+            <a href="#summary" class="btn btn-gov btn-gov-success">Proceed to Final Summary</a>
+          </div>
+        </section>
+
+        <!-- VIEW 9: HUMAN VERIFICATION WORKFLOW -->
+        <section id="view-human-verification" class="app-page-view" style="display:none;">
+          <div class="gov-card">
+            <div class="gov-card-header">
+              <div>
+                <div class="gov-card-title"><i class="bi bi-person-check-fill text-warning"></i> Human-in-the-Loop Verification Desk</div>
+                <div class="gov-card-subtitle">Review low-confidence optical readings and override with officer sign-off.</div>
+              </div>
+              <div class="text-end">
+                <div class="small fw-bold" id="human-reviewer-name">Officer</div>
+                <div class="form-hint-text" id="human-reviewer-timestamp">Date</div>
+              </div>
+            </div>
+
+            <div class="gov-card-body">
+              <div class="alert alert-warning mb-4">
+                <i class="bi bi-info-circle-fill"></i> Declarations with optical confidence below 70% require manual officer confirmation before generating the statutory certificate.
+              </div>
+
+              <div id="human-review-items-container">
+                <!-- Dynamic low confidence items -->
+              </div>
+
+              <div class="form-group mt-4">
+                <label class="form-label-gov" for="human-review-notes">Officer Verification Notes &amp; Justification</label>
+                <textarea id="human-review-notes" class="form-control form-control-gov" rows="3" placeholder="Explain basis of manual verification from physical packaging examination..."></textarea>
+              </div>
+
+              <div class="d-flex justify-content-end gap-3 mt-4 pt-3 border-top">
+                <button class="btn btn-gov btn-gov-secondary" id="btn-human-review-return">Return to Summary</button>
+                <button class="btn btn-gov btn-gov-success" id="btn-human-review-signoff">
+                  <i class="bi bi-patch-check-fill"></i> Sign Off &amp; Confirm Corrections
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 10: INSPECTION SUMMARY -->
+        <section id="view-summary" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Inspection Dossier Summary</h2>
+              <p class="text-muted mb-0">Consolidated examination findings and final officer verdict commitment.</p>
+            </div>
+            <button class="btn btn-gov btn-gov-primary" id="btn-summary-generate-report">
+              <i class="bi bi-file-earmark-pdf-fill"></i> Generate Official Certificate
+            </button>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-8">
+              <!-- Declarations Table Card -->
+              <div class="gov-card p-3 mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="mb-0 fw-bold"><i class="bi bi-list-check text-primary"></i> Verified Statutory Declarations</h5>
+                  <span id="summary-officer-review-status"></span>
+                </div>
+                <div class="table-responsive-gov">
+                  <table class="table-gov">
+                    <thead>
+                      <tr>
+                        <th>Declaration Field</th>
+                        <th>Extracted / Verified Value</th>
+                        <th>Statutory Rule</th>
+                      </tr>
+                    </thead>
+                    <tbody id="summary-declarations-table-body">
+                      <!-- Dynamic rows -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Violations Recap -->
+              <div class="gov-card p-3">
+                <h5 class="mb-3 fw-bold"><i class="bi bi-exclamation-triangle-fill text-danger"></i> Detected Violations &amp; Seizure Grounds</h5>
+                <div id="summary-violations-list">
+                  <!-- Dynamic violation alerts -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <!-- Product Particulars Card -->
+              <div class="gov-card p-3 mb-3">
+                <div class="fw-bold mb-2 text-primary small text-uppercase"><i class="bi bi-info-circle"></i> Examination Particulars</div>
+                <div class="d-flex justify-content-between py-1 border-bottom small">
+                  <span class="text-muted">Inspection ID:</span>
+                  <span class="font-monospace fw-bold" id="summary-inspection-id">INS-2026-XXXX</span>
+                </div>
+                <div class="d-flex justify-content-between py-1 border-bottom small">
+                  <span class="text-muted">Product:</span>
+                  <span class="fw-bold" id="summary-product-name">Product</span>
+                </div>
+                <div class="d-flex justify-content-between py-1 border-bottom small">
+                  <span class="text-muted">Category:</span>
+                  <span id="summary-category">Category</span>
+                </div>
+                <div class="d-flex justify-content-between py-1 border-bottom small">
+                  <span class="text-muted">Inspector:</span>
+                  <span id="summary-inspector">Inspector</span>
+                </div>
+                <div class="d-flex justify-content-between py-1 border-bottom small">
+                  <span class="text-muted">Date:</span>
+                  <span id="summary-date">Date</span>
+                </div>
+                <div class="d-flex justify-content-between py-1 border-bottom small">
+                  <span class="text-muted">Location:</span>
+                  <span id="summary-location">Location</span>
+                </div>
+                <div class="d-flex justify-content-between py-1 small">
+                  <span class="text-muted">Barcode:</span>
+                  <span class="font-monospace" id="summary-barcode">N/A</span>
+                </div>
+              </div>
+
+              <!-- Final Verdict & Sign-off Form -->
+              <div class="gov-card p-3">
+                <div class="fw-bold mb-3 text-primary small text-uppercase"><i class="bi bi-pen-fill"></i> Officer Final Commitment</div>
+                
+                <div class="mb-3">
+                  <label class="form-label-gov" for="summary-decision-select">Statutory Action Decision <span class="required-star">*</span></label>
+                  <select id="summary-decision-select" class="form-select form-control-gov">
+                    <option value="Notice Issued">Issue Notice under Sec 36(1) LM Act</option>
+                    <option value="Verified Compliant">Approve Package as Compliant</option>
+                    <option value="Seizure Order">Seize Commodity Batch for Laboratory Analysis</option>
+                    <option value="Escalated to Directorate">Escalate to Senior Enforcement Officer</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label-gov" for="summary-final-remarks">Final Official Remarks</label>
+                  <textarea id="summary-final-remarks" class="form-control form-control-gov" rows="2" placeholder="Enter final enforcement notes or inspection summary..."></textarea>
+                </div>
+
+                <button class="btn btn-gov btn-gov-primary w-100 py-2 fw-bold" id="btn-summary-commit-decision">
+                  <i class="bi bi-check2-circle"></i> Commit &amp; Generate Certificate
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 11: OFFICIAL REPORT & CERTIFICATE -->
+        <section id="view-reports" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2 no-print">
+            <div>
+              <h2 class="mb-1">Official Government Inspection Report</h2>
+              <p class="text-muted mb-0">Legally admissible statutory certificate under Legal Metrology Rules, 2011.</p>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-gov btn-gov-secondary btn-gov-sm" id="btn-report-copy-verif-id">
+                <i class="bi bi-copy"></i> Copy Verification ID
+              </button>
+              <button class="btn btn-gov btn-gov-secondary btn-gov-sm" id="btn-report-download-json">
+                <i class="bi bi-filetype-json"></i> Export JSON
+              </button>
+              <button class="btn btn-gov btn-gov-primary" id="btn-report-print-pdf">
+                <i class="bi bi-printer-fill"></i> Print / Save PDF
+              </button>
+            </div>
+          </div>
+
+          <!-- Printable Government Report Sheet -->
+          <div class="official-report-sheet">
+            <div class="report-gov-header">
+              <!-- Government Crest Emblem SVG -->
+              <svg class="report-emblem" viewBox="0 0 100 100" fill="#0f2942">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#0f2942" stroke-width="4"/>
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#b45309" stroke-width="1.5"/>
+                <path d="M50 20 L58 36 L76 36 L62 48 L68 64 L50 54 L32 64 L38 48 L24 36 L42 36 Z" fill="#0f2942"/>
+                <text x="50" y="80" font-size="9" font-family="Arial" font-weight="bold" text-anchor="middle" fill="#0f2942">SATYAMEVA JAYATE</text>
+              </svg>
+              <div class="report-ministry-title">GOVERNMENT OF INDIA</div>
+              <div class="report-subhead">MINISTRY OF CONSUMER AFFAIRS, FOOD &amp; PUBLIC DISTRIBUTION</div>
+              <div class="fw-bold small text-secondary">DIRECTORATE OF LEGAL METROLOGY &bull; PACKAGED COMMODITIES DIVISION</div>
+              <div class="report-cert-no-badge" id="report-cert-no">CERTIFICATE NO: LMPC-CERT-2026-8801-VERIFIED</div>
+            </div>
+
+            <div class="report-section-heading">1. Inspection &amp; Commodity Metadata</div>
+            <div class="report-meta-grid">
+              <div><strong>Inspection Dossier ID:</strong> <span class="font-monospace" id="report-meta-insp-id">INS-2026-8801</span></div>
+              <div><strong>Date of Examination:</strong> <span id="report-generated-date">10 Sep 2026</span></div>
+              <div><strong>Commodity Name:</strong> <span id="report-meta-product">NutriCrunch Cookies</span></div>
+              <div><strong>Category:</strong> <span id="report-meta-category">Packaged Food</span></div>
+              <div><strong>Authorized Inspector:</strong> <span id="report-meta-inspector">Rajesh Sharma (EMP-8842)</span></div>
+              <div><strong>Location of Inspection:</strong> <span id="report-meta-location">Reliance Supermarket, Mumbai</span></div>
+              <div><strong>Compliance Score:</strong> <span class="fw-bold" id="report-meta-score">78%</span></div>
+              <div><strong>Statutory Verdict:</strong> <span id="report-meta-verdict">NON-COMPLIANT</span></div>
+            </div>
+
+            <div class="report-section-heading">2. Rule 6 Mandatory Declarations Matrix</div>
+            <table class="table-gov mb-4">
+              <thead>
+                <tr>
+                  <th>Statutory Declaration</th>
+                  <th>Rule Reference</th>
+                  <th>Observed Packaging Content</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="report-declarations-table-body">
+                <!-- Dynamic report declarations -->
+              </tbody>
+            </table>
+
+            <div class="report-section-heading">3. Statutory Non-Compliance &amp; Legal Grounds</div>
+            <div id="report-violations-container">
+              <!-- Dynamic violations table -->
+            </div>
+
+            <!-- Signature & QR Verification Block -->
+            <div class="report-signature-block">
+              <div class="report-qr-container">
+                <canvas id="report-qr-canvas"></canvas>
+                <div class="form-hint-text text-center font-monospace" style="font-size:0.65rem;">SCAN TO VERIFY AUTHENTICITY</div>
+              </div>
+
+              <div class="text-center" style="min-width:220px;">
+                <div class="text-primary fw-bold mb-4" style="font-family: 'Brush Script MT', cursive; font-size:1.4rem;">
+                  Rajesh Sharma
+                </div>
+                <div class="fw-bold border-top pt-1" id="report-officer-signature-name">Rajesh Sharma (EMP-8842)</div>
+                <div class="small text-muted">Authorized Inspector of Legal Metrology</div>
+                <div class="form-hint-text">Digitally Signed &bull; Section 36(1) Enforced</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 12: INSPECTIONS REGISTRY (HISTORY) -->
+        <section id="view-history" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Inspection Registry &amp; Audit Records</h2>
+              <p class="text-muted mb-0">Search, filter, and export all historical packaged commodity examinations.</p>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-gov btn-gov-secondary btn-gov-sm" id="btn-history-export-csv">
+                <i class="bi bi-file-earmark-spreadsheet"></i> Export CSV
+              </button>
+              <button class="btn btn-gov btn-gov-secondary btn-gov-sm" id="btn-history-export-json">
+                <i class="bi bi-filetype-json"></i> Export JSON
+              </button>
+              <a href="#new-inspection" class="btn btn-gov btn-gov-primary btn-gov-sm">
+                <i class="bi bi-plus-lg"></i> New Inspection
+              </a>
+            </div>
+          </div>
+
+          <!-- Filter Toolbar -->
+          <div class="gov-card p-3 mb-4">
+            <div class="row g-3 align-items-center">
+              <div class="col-12 col-md-5">
+                <div class="input-group">
+                  <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                  <input type="text" id="history-search-input" class="form-control form-control-gov" placeholder="Search by ID, Product, Brand, Inspector, Barcode, Location..." />
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <select id="history-filter-category" class="form-select form-control-gov">
+                  <option value="ALL">All Categories</option>
+                  <option value="Packaged Food & Confectionery">Packaged Food</option>
+                  <option value="Edible Oils & Commodities">Edible Oils</option>
+                  <option value="Cosmetics & Personal Care">Cosmetics</option>
+                  <option value="Electronics & Hardware">Electronics</option>
+                  <option value="Household & Cleaning">Household</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-2">
+                <select id="history-filter-status" class="form-select form-control-gov">
+                  <option value="ALL">All Statuses</option>
+                  <option value="COMPLIANT">Compliant</option>
+                  <option value="NON-COMPLIANT">Non-Compliant</option>
+                  <option value="REVIEW REQUIRED">Review Required</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-2 text-end">
+                <span class="small text-muted" id="history-total-count">0 records</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Table -->
+          <div class="table-responsive-gov d-none d-md-block">
+            <table class="table-gov">
+              <thead>
+                <tr>
+                  <th>Inspection ID</th>
+                  <th>Product &amp; Brand</th>
+                  <th>Category</th>
+                  <th>Inspector</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Score</th>
+                  <th>Violations</th>
+                  <th class="text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="history-table-body">
+                <!-- Dynamic rows -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Mobile Cards Container -->
+          <div class="d-md-none" id="history-mobile-cards">
+            <!-- Dynamic mobile cards -->
+          </div>
+
+          <!-- Pagination -->
+          <div class="d-flex justify-content-end mt-4" id="history-pagination-container">
+            <!-- Dynamic pagination -->
+          </div>
+        </section>
+
+        <!-- VIEW 13: INSPECTION AUDIT DETAILS -->
+        <section id="view-inspection-details" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Inspection Audit Trail &bull; <span class="font-monospace text-primary" id="details-inspection-id">INS-2026-XXXX</span></h2>
+              <p class="text-muted mb-0">Immutable digital record and evidence timeline.</p>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-gov btn-gov-secondary btn-gov-sm" id="btn-details-back-history">
+                <i class="bi bi-arrow-left"></i> Back to Registry
+              </button>
+              <button class="btn btn-gov btn-gov-primary btn-gov-sm" id="btn-details-open-report">
+                <i class="bi bi-file-earmark-pdf"></i> Official Certificate
+              </button>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-7">
+              <div class="gov-card p-3 mb-4">
+                <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-clock-history"></i> Complete Examination Lifecycle</h5>
+                <div id="details-audit-timeline">
+                  <!-- Dynamic timeline -->
+                </div>
+              </div>
+
+              <div class="gov-card p-3">
+                <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-camera"></i> Photographic Evidence</h5>
+                <div id="details-images-grid">
+                  <!-- Image preview -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-5">
+              <div class="gov-card p-3">
+                <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-info-circle"></i> Examination Particulars</h5>
+                <div class="d-flex justify-content-between py-2 border-bottom">
+                  <span class="text-muted">Product Name:</span>
+                  <span class="fw-bold" id="details-product-name">Product</span>
+                </div>
+                <div class="d-flex justify-content-between py-2 border-bottom">
+                  <span class="text-muted">Category:</span>
+                  <span id="details-category">Category</span>
+                </div>
+                <div class="d-flex justify-content-between py-2 border-bottom">
+                  <span class="text-muted">Inspector:</span>
+                  <span id="details-inspector">Inspector</span>
+                </div>
+                <div class="d-flex justify-content-between py-2 border-bottom">
+                  <span class="text-muted">Location:</span>
+                  <span id="details-location">Location</span>
+                </div>
+                <div class="d-flex justify-content-between py-2 border-bottom">
+                  <span class="text-muted">Date &amp; Time:</span>
+                  <span id="details-date">Date</span>
+                </div>
+                <div class="d-flex justify-content-between py-2 border-bottom">
+                  <span class="text-muted">Verdict:</span>
+                  <span id="details-status-badge">Status</span>
+                </div>
+                <div class="d-flex justify-content-between py-2">
+                  <span class="text-muted">Score:</span>
+                  <span class="fw-bold font-monospace" id="details-score">0%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 14: ANALYTICS & TRENDS -->
+        <section id="view-analytics" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Analytics &amp; Enforcement Intelligence</h2>
+              <p class="text-muted mb-0">Aggregate compliance metrics, violation distribution, and category patterns.</p>
+            </div>
+            <div class="d-flex gap-2">
+              <select id="analytics-date-range" class="form-select form-select-sm" style="width:160px;">
+                <option value="7D">Last 7 Days</option>
+                <option value="30D" selected>Last 30 Days</option>
+                <option value="90D">Last Quarter</option>
+                <option value="1Y">Current Year (2026)</option>
+              </select>
+              <button class="btn btn-gov btn-gov-primary btn-gov-sm" id="btn-export-analytics">
+                <i class="bi bi-printer"></i> Print Analytics
+              </button>
+            </div>
+          </div>
+
+          <!-- KPI Summary Row -->
+          <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-white border rounded text-center">
+                <div class="h3 fw-bold text-primary mb-0" id="analytics-total-inspections">0</div>
+                <div class="form-hint-text text-uppercase fw-semibold">Total Examined</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-white border rounded text-center">
+                <div class="h3 fw-bold text-success mb-0" id="analytics-compliance-rate">0%</div>
+                <div class="form-hint-text text-uppercase fw-semibold">Compliance Rate</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-white border rounded text-center">
+                <div class="h3 fw-bold text-danger mb-0" id="analytics-total-violations">0</div>
+                <div class="form-hint-text text-uppercase fw-semibold">Statutory Violations</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-white border rounded text-center">
+                <div class="h3 fw-bold text-warning mb-0" id="analytics-pending-reviews">0</div>
+                <div class="form-hint-text text-uppercase fw-semibold">Manual Reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts -->
+          <div class="row g-4">
+            <div class="col-12 col-lg-7">
+              <div class="gov-card p-3">
+                <div class="gov-card-title mb-3"><i class="bi bi-graph-up text-primary"></i> Daily Inspection &amp; Compliance Trends</div>
+                <div style="height:320px;">
+                  <canvas id="chart-inspection-trends"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-5">
+              <div class="gov-card p-3">
+                <div class="gov-card-title mb-3"><i class="bi bi-pie-chart-fill text-danger"></i> Violations by Statutory Rule</div>
+                <div style="height:320px;">
+                  <canvas id="chart-violation-distribution"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="gov-card p-3">
+                <div class="gov-card-title mb-3"><i class="bi bi-bar-chart-fill text-success"></i> Category-Level Compliance Pass Rates</div>
+                <div style="height:260px;">
+                  <canvas id="chart-category-compliance"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 15: RULES MANAGEMENT (ADMIN) -->
+        <section id="view-rules" class="app-page-view admin-only" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Legal Metrology Rules Catalog</h2>
+              <p class="text-muted mb-0">Configure statutory compliance rules, thresholds, and penalty references.</p>
+            </div>
+            <button class="btn btn-gov btn-gov-primary" id="btn-add-new-rule">
+              <i class="bi bi-plus-circle"></i> Add Statutory Rule
+            </button>
+          </div>
+
+          <div class="gov-card p-3 mb-4">
+            <div class="row g-3 align-items-center">
+              <div class="col-12 col-md-6">
+                <input type="text" id="rules-search-input" class="form-control form-control-gov" placeholder="Search rules by ID, Title, or Description..." />
+              </div>
+              <div class="col-6 col-md-4">
+                <select id="rules-filter-category" class="form-select form-control-gov">
+                  <option value="ALL">All Rule Categories</option>
+                  <option value="Mandatory Declarations">Mandatory Declarations</option>
+                  <option value="Product Identification">Product Identification</option>
+                  <option value="Net Quantity">Net Quantity</option>
+                  <option value="Pricing & Taxes">Pricing & Taxes</option>
+                  <option value="Consumer Redressal">Consumer Redressal</option>
+                  <option value="Origin of Goods">Origin of Goods</option>
+                  <option value="Typography & Visibility">Typography & Visibility</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-2 text-end">
+                <span class="small text-muted" id="rules-total-count">0 Rules</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive-gov">
+            <table class="table-gov">
+              <thead>
+                <tr>
+                  <th>Rule ID</th>
+                  <th>Title &amp; Requirement</th>
+                  <th>Category</th>
+                  <th>Legal Citation</th>
+                  <th>Severity</th>
+                  <th>Status</th>
+                  <th class="text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="rules-table-body">
+                <!-- Dynamic rules rows -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- VIEW 16: USER DIRECTORY (ADMIN) -->
+        <section id="view-users" class="app-page-view admin-only" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Inspector &amp; Officer Directory</h2>
+              <p class="text-muted mb-0">Manage authorized personnel, enforcement zones, and access roles.</p>
+            </div>
+            <button class="btn btn-gov btn-gov-primary" id="btn-add-new-user">
+              <i class="bi bi-person-plus-fill"></i> Add Officer
+            </button>
+          </div>
+
+          <div class="gov-card p-3 mb-4">
+            <div class="row g-3 align-items-center">
+              <div class="col-12 col-md-6">
+                <input type="text" id="users-search-input" class="form-control form-control-gov" placeholder="Search by Name, Email, Employee ID, or Department..." />
+              </div>
+              <div class="col-6 col-md-4">
+                <select id="users-filter-role" class="form-select form-control-gov">
+                  <option value="ALL">All Roles</option>
+                  <option value="Inspector">Inspector</option>
+                  <option value="Senior Inspector">Senior Inspector</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-2 text-end">
+                <span class="small text-muted" id="users-total-count">0 Officers</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive-gov">
+            <table class="table-gov">
+              <thead>
+                <tr>
+                  <th>Employee ID</th>
+                  <th>Officer Name &amp; Email</th>
+                  <th>Role</th>
+                  <th>Department / Zone</th>
+                  <th>Last Login</th>
+                  <th>Status</th>
+                  <th class="text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="users-table-body">
+                <!-- Dynamic users rows -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- VIEW 17: NOTIFICATIONS CENTER -->
+        <section id="view-notifications" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Alerts &amp; Statutory Notices Center</h2>
+              <p class="text-muted mb-0">System alerts, flagged violations, and human review assignments.</p>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-gov btn-gov-secondary btn-gov-sm" id="btn-notif-mark-all-read">
+                <i class="bi bi-check2-all"></i> Mark All as Read
+              </button>
+              <button class="btn btn-gov btn-gov-secondary btn-gov-sm" id="btn-notif-clear-all">
+                <i class="bi bi-trash"></i> Clear All
+              </button>
+            </div>
+          </div>
+
+          <div id="notifications-list-container">
+            <!-- Dynamic notification cards -->
+          </div>
+
+          <div id="notifications-empty-state" class="gov-empty-state" style="display:none;">
+            <div class="empty-state-icon"><i class="bi bi-bell-slash"></i></div>
+            <div class="empty-state-title">No Unread Notifications</div>
+            <div class="empty-state-desc">You are all caught up with legal metrology inspection alerts.</div>
+          </div>
+        </section>
+
+        <!-- VIEW 18: SETTINGS & API CONFIG -->
+        <section id="view-settings" class="app-page-view" style="display:none;">
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <!-- Officer Profile Card -->
+              <div class="gov-card p-4">
+                <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-person-badge"></i> Officer Profile</h5>
+                <div class="mb-3">
+                  <label class="form-label-gov" for="settings-profile-name">Full Officer Name</label>
+                  <input type="text" id="settings-profile-name" class="form-control form-control-gov" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label-gov" for="settings-profile-email">Official Email</label>
+                  <input type="email" id="settings-profile-email" class="form-control form-control-gov" readonly />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label-gov" for="settings-profile-phone">Mobile Phone</label>
+                  <input type="tel" id="settings-profile-phone" class="form-control form-control-gov" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label-gov" for="settings-profile-dept">Department</label>
+                  <input type="text" id="settings-profile-dept" class="form-control form-control-gov" />
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="small text-muted">Role Authority:</span>
+                  <span class="badge bg-primary" id="settings-profile-role">Inspector</span>
+                </div>
+                <button class="btn btn-gov btn-gov-primary w-100" id="btn-save-profile-settings">
+                  <i class="bi bi-save"></i> Update Profile
+                </button>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <!-- Backend & API Configuration Card -->
+              <div class="gov-card p-4">
+                <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-hdd-network-fill"></i> Flask REST API &amp; Backend Settings</h5>
+                <div class="mb-3">
+                  <label class="form-label-gov" for="settings-api-base-url">Flask REST API Base URL</label>
+                  <input type="text" id="settings-api-base-url" class="form-control form-control-gov font-monospace" placeholder="http://localhost:5000" />
+                  <div class="form-hint-text">Configure your Flask REST server endpoint.</div>
+                </div>
+
+                <div class="form-check form-switch mb-3">
+                  <input class="form-check-input" type="checkbox" id="settings-mock-data-toggle" checked />
+                  <label class="form-check-label small fw-semibold" for="settings-mock-data-toggle">
+                    Enable Standalone Mock Adapter (Offline Demo Mode)
+                  </label>
+                  <div class="form-hint-text">Allows running the entire application offline without active Flask backend.</div>
+                </div>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-gov btn-gov-secondary flex-fill" id="btn-test-api-connection">
+                    <i class="bi bi-arrow-repeat"></i> Test API Connection
+                  </button>
+                  <button class="btn btn-gov btn-gov-primary flex-fill" id="btn-save-api-settings">
+                    <i class="bi bi-check2"></i> Save API Config
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 19: SYSTEM STATUS -->
+        <section id="view-system-status" class="app-page-view" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Enterprise Services Health &amp; Sync Status</h2>
+              <p class="text-muted mb-0" id="system-last-sync-time">Last Checked: Just now</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span id="system-overall-health-badge" class="status-badge compliant">All Systems Operational</span>
+              <button class="btn btn-gov btn-gov-primary btn-gov-sm" id="btn-refresh-system-status">
+                <i class="bi bi-arrow-clockwise"></i> Check All Services Now
+              </button>
+            </div>
+          </div>
+
+          <div class="service-health-grid" id="system-services-grid">
+            <!-- Dynamic Service Health Cards -->
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- =========================================================================
+       3. GLOBAL UI OVERLAYS (TOASTS, MODALS, DRAWERS)
+       ========================================================================= -->
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Inspection Quick View Drawer -->
+  <div class="gov-drawer-backdrop" id="drawer-backdrop"></div>
+  <div class="gov-drawer" id="inspection-drawer">
+    <div class="gov-drawer-header">
+      <div>
+        <h5 class="mb-0 fw-bold font-monospace text-primary" id="drawer-inspection-id">INS-2026-XXXX</h5>
+        <div class="small text-muted" id="drawer-product-name">Product Name</div>
+      </div>
+      <button class="btn btn-sm btn-outline-secondary" id="drawer-close-btn">&times;</button>
+    </div>
+    <div class="gov-drawer-body">
+      <div class="mb-3" id="drawer-status-badge"></div>
+      <div class="mb-2 small"><strong>Category:</strong> <span id="drawer-category">Category</span></div>
+      <div class="mb-2 small"><strong>Brand:</strong> <span id="drawer-brand">Brand</span></div>
+      <div class="mb-2 small"><strong>Inspector:</strong> <span id="drawer-inspector">Inspector</span></div>
+      <div class="mb-2 small"><strong>Location:</strong> <span id="drawer-location">Location</span></div>
+      <div class="mb-2 small"><strong>Date:</strong> <span id="drawer-date">Date</span></div>
+      <div class="mb-2 small"><strong>Confidence Score:</strong> <span id="drawer-score" class="fw-bold">0%</span></div>
+      <div class="mb-2 small"><strong>Violations:</strong> <span id="drawer-violations" class="badge bg-danger">0</span></div>
+    </div>
+    <div class="gov-drawer-footer">
+      <button class="btn btn-gov btn-gov-secondary btn-gov-sm" onclick="UI.closeInspectionDrawer()">Close</button>
+      <button class="btn btn-gov btn-gov-primary btn-gov-sm" id="drawer-view-full-btn">Full Audit Details</button>
+    </div>
+  </div>
+
+  <!-- Global Confirmation Modal -->
+  <div class="modal fade" id="global-confirm-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="confirm-modal-title">Confirm Action</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="confirm-modal-message">
+          Are you sure you wish to proceed?
+        </div>
+        <div class="modal-footer border-top">
+          <button type="button" class="btn btn-gov btn-gov-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-gov btn-gov-primary" id="confirm-modal-action-btn">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Inspection Copilot Assistant Drawer -->
+  <div class="gov-drawer-backdrop" id="copilot-backdrop"></div>
+  <div class="gov-drawer copilot-drawer" id="copilot-drawer">
+    <div class="gov-drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="copilot-avatar-header"><i class="bi bi-robot"></i></div>
+        <div>
+          <h5 class="mb-0 fw-bold">LMPC Statutory Copilot</h5>
+          <div class="small text-muted">Legal Metrology Act, 2009 &bull; Rule 6 Guidance</div>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-1">
+        <button class="btn btn-sm btn-outline-secondary py-0" id="copilot-clear-chat-btn" title="Clear Chat"><i class="bi bi-arrow-counterclockwise"></i></button>
+        <button class="btn btn-sm btn-outline-secondary" id="copilot-close-btn">&times;</button>
+      </div>
+    </div>
+    <div class="copilot-quick-chips-bar">
+      <div class="small fw-semibold text-muted mb-1">Quick Legal Prompts:</div>
+      <div class="d-flex flex-wrap gap-1">
+        <button class="copilot-quick-chip" data-query="Explain why this package is Non-Compliant">Why Non-Compliant?</button>
+        <button class="copilot-quick-chip" data-query="Explain Rule 6(1)(e) MRP and taxes requirement">Rule 6(1)(e) MRP</button>
+        <button class="copilot-quick-chip" data-query="Explain Unit Sale Price Rule 6(1)(da)">Rule 6(1)(da) USP</button>
+        <button class="copilot-quick-chip" data-query="What is the penalty under Section 36(1)?">Section 36(1) Penalties</button>
+        <button class="copilot-quick-chip" data-query="Explain numeral font height rules under Rule 8">Rule 8 Font Sizing</button>
+        <button class="copilot-quick-chip" data-query="How to verify faint address or low confidence text?">Manual Verification</button>
+      </div>
+    </div>
+    <div class="copilot-messages-box" id="copilot-messages-container">
+      <!-- Dynamic chat bubbles -->
+    </div>
+    <div class="copilot-input-container">
+      <form id="copilot-input-form" class="d-flex gap-2">
+        <input type="text" id="copilot-chat-input" class="form-control form-control-gov" placeholder="Ask about LMPC rules, violations, penalties..." />
+        <button type="submit" class="btn btn-gov btn-gov-primary"><i class="bi bi-send-fill"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Copilot FAB Button -->
+  <button class="copilot-floating-fab" id="btn-floating-copilot" onclick="Copilot.toggleDrawer()" title="LMPC AI Statutory Copilot">
+    <i class="bi bi-robot"></i>
+    <span>AI Copilot</span>
+  </button>
+
+  <!-- Batch Inspection Queue Modal -->
+  <div class="modal fade" id="batch-inspection-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <div class="sidebar-brand-logo" style="width:36px; height:36px; font-size:1.2rem;"><i class="bi bi-layers-fill"></i></div>
+            <div>
+              <h5 class="modal-title fw-bold mb-0">Multi-Product Batch Inspection Queue</h5>
+              <div class="small text-muted">Automated high-throughput statutory compliance evaluation.</div>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <!-- KPI Summary Cards -->
+          <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-light border rounded text-center">
+                <div class="h4 fw-bold text-dark mb-0" id="batch-kpi-total">5</div>
+                <div class="form-hint-text text-uppercase fw-semibold">Total Queue</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-light border rounded text-center">
+                <div class="h4 fw-bold text-success mb-0" id="batch-kpi-compliant">0</div>
+                <div class="form-hint-text text-uppercase fw-semibold">Compliant</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-light border rounded text-center">
+                <div class="h4 fw-bold text-danger mb-0" id="batch-kpi-non-compliant">0</div>
+                <div class="form-hint-text text-uppercase fw-semibold">Violations</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-light border rounded text-center">
+                <div class="h4 fw-bold text-warning mb-0" id="batch-kpi-review">0</div>
+                <div class="form-hint-text text-uppercase fw-semibold">Review Required</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Overall Progress -->
+          <div class="mb-3">
+            <div class="d-flex justify-content-between small fw-bold mb-1">
+              <span>Overall Batch Execution</span>
+              <span id="batch-progress-text">Ready to run</span>
+            </div>
+            <div class="progress" style="height:12px;">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" id="batch-overall-progressbar" style="width:0%;">0%</div>
+            </div>
+          </div>
+
+          <!-- Controls Bar -->
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div class="d-flex gap-2">
+              <button class="btn btn-gov btn-gov-primary" id="btn-batch-start-processing">
+                <i class="bi bi-play-fill"></i> Process Batch Queue
+              </button>
+              <button class="btn btn-gov btn-gov-secondary btn-gov-sm" id="btn-batch-reset-queue">
+                <i class="bi bi-arrow-counterclockwise"></i> Reset
+              </button>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-gov btn-gov-outline-primary btn-gov-sm" onclick="document.getElementById('batch-multi-file-input').click()">
+                <i class="bi bi-cloud-arrow-up-fill"></i> Add Product Images
+              </button>
+              <input type="file" id="batch-multi-file-input" accept="image/*" multiple style="display:none;" />
+              <button class="btn btn-gov btn-gov-secondary btn-gov-sm" id="btn-batch-export-csv">
+                <i class="bi bi-download"></i> Export CSV
+              </button>
+            </div>
+          </div>
+
+          <!-- Batch Items Table -->
+          <div class="table-responsive-gov">
+            <table class="table-gov">
+              <thead>
+                <tr>
+                  <th>Item Code</th>
+                  <th>Product Particulars</th>
+                  <th>Processing State</th>
+                  <th>Statutory Verdict</th>
+                  <th>Score</th>
+                  <th>Violations</th>
+                  <th class="text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="batch-table-body">
+                <!-- Dynamic Batch Rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer border-top">
+          <button type="button" class="btn btn-gov btn-gov-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Add / Edit Rule Modal -->
+  <div class="modal fade" id="admin-rule-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="rule-modal-title">Add Statutory Rule</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label-gov" for="modal-rule-id">Rule Reference Code</label>
+              <input type="text" id="modal-rule-id" class="form-control form-control-gov font-monospace" placeholder="e.g. LMPC-R6-1H" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label-gov" for="modal-rule-category">Rule Category</label>
+              <select id="modal-rule-category" class="form-select form-control-gov">
+                <option value="Mandatory Declarations">Mandatory Declarations</option>
+                <option value="Product Identification">Product Identification</option>
+                <option value="Net Quantity">Net Quantity</option>
+                <option value="Pricing & Taxes">Pricing & Taxes</option>
+                <option value="Consumer Redressal">Consumer Redressal</option>
+                <option value="Origin of Goods">Origin of Goods</option>
+                <option value="Typography & Visibility">Typography & Visibility</option>
+              </select>
+            </div>
+            <div class="col-md-8">
+              <label class="form-label-gov" for="modal-rule-title">Rule Title</label>
+              <input type="text" id="modal-rule-title" class="form-control form-control-gov" placeholder="e.g. Unit Sale Price Requirement" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label-gov" for="modal-rule-severity">Violation Severity</label>
+              <select id="modal-rule-severity" class="form-select form-control-gov">
+                <option value="Critical">Critical</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label-gov" for="modal-rule-legal-ref">Statutory Reference (Act / Rule / Section)</label>
+              <input type="text" id="modal-rule-legal-ref" class="form-control form-control-gov" placeholder="Legal Metrology (Packaged Commodities) Rules, 2011, Rule 6(1)(da)" />
+            </div>
+            <div class="col-12">
+              <label class="form-label-gov" for="modal-rule-desc">Detailed Statutory Requirement</label>
+              <textarea id="modal-rule-desc" class="form-control form-control-gov" rows="3" placeholder="Specify statutory text condition, standard unit rules, or display requirements..."></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-top">
+          <button type="button" class="btn btn-gov btn-gov-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-gov btn-gov-primary" id="btn-save-rule-modal">Save Rule</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Add / Edit User Modal -->
+  <div class="modal fade" id="admin-user-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="user-modal-title">Register Officer</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label-gov" for="modal-user-name">Full Officer Name</label>
+              <input type="text" id="modal-user-name" class="form-control form-control-gov" placeholder="e.g. Kavita Patel" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label-gov" for="modal-user-empid">Employee ID</label>
+              <input type="text" id="modal-user-empid" class="form-control form-control-gov" placeholder="EMP-9220" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label-gov" for="modal-user-role">Role</label>
+              <select id="modal-user-role" class="form-select form-control-gov">
+                <option value="Inspector">Inspector</option>
+                <option value="Senior Inspector">Senior Inspector</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label-gov" for="modal-user-email">Official Email</label>
+              <input type="email" id="modal-user-email" class="form-control form-control-gov" placeholder="kavita@metrology.gov.in" />
+            </div>
+            <div class="col-12">
+              <label class="form-label-gov" for="modal-user-dept">Department / Directorate</label>
+              <input type="text" id="modal-user-dept" class="form-control form-control-gov" placeholder="Enforcement Zone 3 (South)" />
+            </div>
+            <div class="col-12">
+              <label class="form-label-gov" for="modal-user-phone">Mobile Phone</label>
+              <input type="tel" id="modal-user-phone" class="form-control form-control-gov" placeholder="+91 98765 43210" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-top">
+          <button type="button" class="btn btn-gov btn-gov-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-gov btn-gov-primary" id="btn-save-user-modal">Save Officer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       4. SCRIPTS (BOOTSTRAP, CHART.JS & APPLICATION MODULES)
+       ========================================================================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+  <!-- Core Infrastructure Modules -->
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/mock-data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui-components.js"></script>
+
+  <!-- Feature Modules -->
+  <script src="js/dashboard.js"></script>
+  <script src="js/new-inspection.js"></script>
+  <script src="js/scanner.js"></script>
+  <script src="js/image-processing.js"></script>
+  <script src="js/ocr.js"></script>
+  <script src="js/ai-analysis.js"></script>
+  <script src="js/compliance.js"></script>
+  <script src="js/violations.js"></script>
+  <script src="js/human-verification.js"></script>
+  <script src="js/summary.js"></script>
+  <script src="js/reports.js"></script>
+  <script src="js/history.js"></script>
+  <script src="js/inspection-details.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/admin-rules.js"></script>
+  <script src="js/admin-users.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/system-status.js"></script>
+  <script src="js/copilot.js"></script>
+  <script src="js/batch-inspection.js"></script>
+
+  <!-- Router & Main Orchestrator -->
+  <script src="js/router.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

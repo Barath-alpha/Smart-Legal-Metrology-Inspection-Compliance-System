@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="faintFilter">
+      <feGaussianBlur stdDeviation="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Container -->
+  <rect width="800" height="520" fill="url(#glowGrad)" rx="16"/>
+  <rect x="20" y="20" width="760" height="480" fill="#ecfdf5" rx="12"/>
+
+  <!-- Brand Banner -->
+  <rect x="20" y="20" width="760" height="90" fill="#064e3b" rx="12"/>
+  <rect x="20" y="90" width="760" height="20" fill="#064e3b"/>
+
+  <text x="400" y="65" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="30" font-weight="900" fill="#a7f3d0" text-anchor="middle" letter-spacing="2">GLOWCARE HERBAL FACE WASH</text>
+  <text x="400" y="95" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="600" fill="#d1fae5" text-anchor="middle">Purifying Neem &amp; Organic Tea Tree Formulation for Radiant Skin</text>
+
+  <!-- Barcode -->
+  <rect x="620" y="130" width="130" height="55" fill="#ffffff" stroke="#a7f3d0" rx="4"/>
+  <g fill="#064e3b">
+    <rect x="630" y="136" width="3" height="32"/>
+    <rect x="636" y="136" width="6" height="32"/>
+    <rect x="645" y="136" width="2" height="32"/>
+    <rect x="650" y="136" width="4" height="32"/>
+    <rect x="658" y="136" width="5" height="32"/>
+    <rect x="668" y="136" width="3" height="32"/>
+    <rect x="675" y="136" width="6" height="32"/>
+    <rect x="686" y="136" width="2" height="32"/>
+    <rect x="693" y="136" width="4" height="32"/>
+    <rect x="702" y="136" width="5" height="32"/>
+    <rect x="712" y="136" width="3" height="32"/>
+    <rect x="720" y="136" width="2" height="32"/>
+    <text x="685" y="178" font-family="monospace" font-size="10" font-weight="bold" fill="#064e3b" text-anchor="middle">8908877665544</text>
+  </g>
+
+  <!-- PDP Panel -->
+  <rect x="50" y="170" width="700" height="315" fill="#ffffff" rx="8" stroke="#10b981" stroke-width="2"/>
+  <rect x="50" y="170" width="700" height="32" fill="#d1fae5" rx="8"/>
+  <text x="65" y="191" font-family="'Inter', Arial, sans-serif" font-size="13" font-weight="800" fill="#065f46">STATUTORY LABELLING PARTICULARS (COSMETICS - LMPC ACT 2009)</text>
+
+  <!-- Field 1: Marketed By -->
+  <text x="70" y="225" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">Marketed By:</text>
+  <text x="260" y="225" font-family="'Inter', Arial, sans-serif" font-size="13" fill="#334155">GlowCare Botanicals Pvt Ltd, 12 Park Street, Kolkata - 700016, West Bengal</text>
+
+  <!-- Field 2: Low-contrast Packer/Importer Address (FAINT TEXT DEMO) -->
+  <rect x="65" y="238" width="670" height="42" fill="#fef9c3" rx="6" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="75" y="258" font-family="'Inter', Arial, sans-serif" font-size="13" font-weight="800" fill="#b45309">Packed &amp; Imported By:</text>
+  <!-- Faint low-contrast text that triggers Review Required -->
+  <text x="260" y="258" font-family="'Inter', Arial, sans-serif" font-size="12" fill="#9ca3af" filter="url(#faintFilter)">BioSkin Labs Co Ltd, Bangk0k Industrial Zone, Samut Prakan 10270</text>
+  <text x="260" y="274" font-family="'Inter', Arial, sans-serif" font-size="11" font-weight="bold" fill="#d97706">⚠️ [REVIEW REQUIRED: Low contrast/faint ink text - OCR Confidence 58% - Needs Inspector Sign-off]</text>
+
+  <!-- Field 3: Net Quantity & USP -->
+  <text x="70" y="308" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">Net Volume:</text>
+  <text x="260" y="308" font-family="'Inter', Arial, sans-serif" font-size="15" font-weight="800" fill="#0f172a">100 ml</text>
+  <text x="350" y="308" font-family="'Inter', Arial, sans-serif" font-size="13" fill="#059669">| Unit Sale Price (USP): ₹ 1.85 / ml</text>
+
+  <!-- Field 4: MRP & Taxes -->
+  <text x="70" y="342" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">MRP (Incl. of all taxes):</text>
+  <text x="260" y="342" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="800" fill="#047857">₹ 185.00 (Inclusive of all taxes)</text>
+
+  <!-- Field 5: Mfg & Exp Dates -->
+  <text x="70" y="375" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">Manufacturing Date:</text>
+  <text x="260" y="375" font-family="'Inter', Arial, sans-serif" font-size="13" fill="#334155">07 / 2026 | Use Before: 06 / 2028 (24 Months)</text>
+
+  <!-- Field 6: Customer Care -->
+  <text x="70" y="410" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">Consumer Care Cell:</text>
+  <text x="260" y="410" font-family="'Inter', Arial, sans-serif" font-size="13" fill="#334155">Email: support@glowcare.in | Tel: +91-33-22899988</text>
+
+  <!-- Field 7: Origin & License -->
+  <text x="70" y="445" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">Country of Origin:</text>
+  <text x="260" y="445" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#334155">Thailand | Import Reg: COS-IMP-2024-8841</text>
+</svg>

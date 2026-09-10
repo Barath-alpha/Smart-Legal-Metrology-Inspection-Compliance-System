@@ -1,0 +1,246 @@
+/* ==========================================================================
+   Smart Legal Metrology Inspection & Compliance System
+   Responsive Breakpoints & Mobile Adaptations
+   ========================================================================== */
+
+/* Large Screens (1440px+) */
+@media (min-width: 1440px) {
+  .ocr-workspace-grid {
+    gap: 2rem;
+  }
+  .ocr-image-viewer-container,
+  .ocr-text-editor-container {
+    height: 600px;
+  }
+}
+
+/* Standard Desktops & Laptops (1025px - 1439px) */
+@media (max-width: 1200px) {
+  :root {
+    --sidebar-width: 250px;
+  }
+}
+
+/* Tablets and Below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 260px;
+  }
+
+  /* Sidebar becomes offcanvas drawer */
+  .app-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .app-sidebar.show {
+    transform: translateX(0);
+  }
+
+  .app-main-content {
+    margin-left: 0 !important;
+  }
+
+  /* OCR Dual Pane collapses to stack */
+  .ocr-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ocr-image-viewer-container {
+    height: 420px;
+  }
+
+  .ocr-text-editor-container {
+    height: 380px;
+  }
+
+  /* Compliance scorecard header stack */
+  .compliance-score-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .violation-evidence-body {
+    grid-template-columns: 1fr;
+  }
+
+  .violation-crop-preview {
+    height: 200px;
+  }
+}
+
+/* Small Tablets and Large Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1rem;
+  }
+
+  .app-topbar {
+    padding: 0 1rem;
+  }
+
+  .gov-portal-banner {
+    padding: 0.35rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .topbar-page-title {
+    font-size: 1rem;
+  }
+
+  .topbar-breadcrumbs {
+    display: none;
+  }
+
+  .inspection-stepper {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .stepper-step {
+    min-width: 60px;
+  }
+
+  .stepper-label {
+    font-size: 0.68rem;
+  }
+
+  .stepper-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  /* Report preview mobile view */
+  .official-report-sheet {
+    padding: 1.5rem 1rem;
+  }
+
+  .report-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .report-signature-block {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  /* Scanner controls on mobile */
+  .scanner-viewport-wrapper {
+    min-height: 280px;
+  }
+
+  .scanner-controls-bar {
+    gap: 0.75rem;
+  }
+
+  .btn-capture-camera {
+    width: 56px;
+    height: 56px;
+  }
+
+  .capture-inner-circle {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Mobile Data Table Cards */
+  .table-responsive-gov {
+    border: none;
+    background: transparent;
+  }
+
+  .evidence-diff-box {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .gov-drawer {
+    width: 100vw;
+  }
+}
+
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .page-container {
+    padding: 0.75rem;
+  }
+
+  .kpi-value {
+    font-size: 1.5rem;
+  }
+
+  .gov-card-header {
+    padding: 0.9rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .gov-card-body {
+    padding: 1rem;
+  }
+
+  .gov-card-footer {
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  .btn-gov {
+    width: 100%;
+  }
+
+  .topbar-right .topbar-badge-pill {
+    display: none;
+  }
+
+  .image-thumbnail-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* Ultrawide 21:9 & 4K Monitors (2560px+) */
+@media (min-width: 2560px) {
+  .page-container {
+    max-width: 2200px;
+    margin: 0 auto;
+  }
+  .ocr-image-viewer-container,
+  .ocr-text-editor-container {
+    height: 720px;
+  }
+  .service-health-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Specific Aspect Ratio Handling */
+.ratio-mobile-portrait {
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+}
+.ratio-tablet {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+.ratio-desktop {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+.ratio-a4 {
+  aspect-ratio: 210 / 297;
+}
+

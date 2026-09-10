@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="50%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Package Foil -->
+  <rect width="800" height="520" fill="url(#bgGrad)" rx="16"/>
+  <rect x="20" y="20" width="760" height="480" fill="#fffbeb" rx="12" filter="url(#cardShadow)"/>
+
+  <!-- Brand Banner -->
+  <rect x="20" y="20" width="760" height="90" fill="#92400e" rx="12"/>
+  <rect x="20" y="90" width="760" height="20" fill="#92400e"/>
+  
+  <text x="400" y="65" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="32" font-weight="900" fill="#fef3c7" text-anchor="middle" letter-spacing="2">NUTRICRUNCH ALMOND COOKIES</text>
+  <text x="400" y="95" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="600" fill="#fde68a" text-anchor="middle">Crunchy Oven-Baked Biscuits with Roasted Californian Almonds</text>
+
+  <!-- Green Veg Logo -->
+  <rect x="50" y="130" width="30" height="30" fill="#ffffff" stroke="#16a34a" stroke-width="2" rx="4"/>
+  <circle cx="65" cy="145" r="7" fill="#16a34a"/>
+  <text x="90" y="150" font-family="'Inter', Arial, sans-serif" font-size="12" font-weight="bold" fill="#16a34a">100% VEGETARIAN</text>
+
+  <!-- Barcode Graphic -->
+  <rect x="620" y="130" width="130" height="60" fill="#ffffff" stroke="#d1d5db" rx="4"/>
+  <g fill="#1f2937">
+    <rect x="630" y="138" width="3" height="35"/>
+    <rect x="635" y="138" width="5" height="35"/>
+    <rect x="643" y="138" width="2" height="35"/>
+    <rect x="648" y="138" width="4" height="35"/>
+    <rect x="655" y="138" width="2" height="35"/>
+    <rect x="660" y="138" width="6" height="35"/>
+    <rect x="670" y="138" width="3" height="35"/>
+    <rect x="676" y="138" width="4" height="35"/>
+    <rect x="683" y="138" width="5" height="35"/>
+    <rect x="692" y="138" width="2" height="35"/>
+    <rect x="698" y="138" width="4" height="35"/>
+    <rect x="705" y="138" width="3" height="35"/>
+    <rect x="712" y="138" width="5" height="35"/>
+    <rect x="720" y="138" width="2" height="35"/>
+    <text x="685" y="185" font-family="monospace" font-size="10" font-weight="bold" fill="#1f2937" text-anchor="middle">8901234567890</text>
+  </g>
+
+  <!-- Principal Display Panel (PDP) Box for Statutory Declarations -->
+  <rect x="50" y="175" width="700" height="305" fill="#ffffff" rx="8" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- Header of PDP -->
+  <rect x="50" y="175" width="700" height="32" fill="#fef3c7" rx="8"/>
+  <text x="65" y="196" font-family="'Inter', Arial, sans-serif" font-size="13" font-weight="800" fill="#92400e">MANDATORY STATUTORY DECLARATIONS (UNDER LMPC RULES, 2011)</text>
+
+  <!-- Field 1: Manufacturer -->
+  <text x="70" y="230" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">Manufactured &amp; Packed By:</text>
+  <text x="280" y="230" font-family="'Inter', Arial, sans-serif" font-size="13" fill="#334155">NutriCrunch Foods Pvt Ltd, Plot 42, GIDC Industrial Area, Pune - 411028, Maharashtra</text>
+
+  <!-- Field 2: Net Quantity -->
+  <text x="70" y="265" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">Net Quantity:</text>
+  <text x="280" y="265" font-family="'Inter', Arial, sans-serif" font-size="15" font-weight="800" fill="#0f172a">200 g</text>
+  <text x="350" y="265" font-family="'Inter', Arial, sans-serif" font-size="12" fill="#64748b">(Unit Sale Price: ₹ 0.325 / g)</text>
+
+  <!-- Field 3: MRP (VIOLATION: Missing "inclusive of all taxes") -->
+  <rect x="65" y="282" width="670" height="40" fill="#fee2e2" rx="6" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="75" y="307" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="800" fill="#dc2626">MRP:</text>
+  <text x="130" y="307" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="900" fill="#b91c1c">Rs. 65.00</text>
+  <text x="250" y="306" font-family="'Inter', Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc2626">⚠️ [NON-COMPLIANT: Omitted statutory "(inclusive of all taxes)" statement - Rule 6(1)(e)]</text>
+
+  <!-- Field 4: Dates -->
+  <text x="70" y="350" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">Date of Manufacture:</text>
+  <text x="280" y="350" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#0f172a">08 / 2026</text>
+  <text x="380" y="350" font-family="'Inter', Arial, sans-serif" font-size="13" fill="#334155">| Best Before 6 Months from Packaging</text>
+
+  <!-- Field 5: Customer Care -->
+  <text x="70" y="385" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">Consumer Care Cell:</text>
+  <text x="280" y="385" font-family="'Inter', Arial, sans-serif" font-size="13" fill="#334155">Email: care@nutricrunch.in | Toll Free: 1800-200-9988 | Exec. Officer</text>
+
+  <!-- Field 6: Origin & License -->
+  <text x="70" y="420" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">Country of Origin:</text>
+  <text x="280" y="420" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="800" fill="#047857">India</text>
+  <text x="350" y="420" font-family="'Inter', Arial, sans-serif" font-size="13" fill="#334155">| FSSAI Central License No. 10014022002345</text>
+
+  <!-- Field 7: Generic Name -->
+  <text x="70" y="455" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="700" fill="#1e293b">Generic Name:</text>
+  <text x="280" y="455" font-family="'Inter', Arial, sans-serif" font-size="13" fill="#334155">Proprietary Food - Baked Sweetened Biscuits / Cookies</text>
+</svg>
